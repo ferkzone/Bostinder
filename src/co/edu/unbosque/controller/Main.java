@@ -6,5 +6,5 @@ public class Main {
 		Controller c = new Controller();
 
 	}
-// la clase main sirve para iniciar el programa 
+	// la clase main sirve para hacer muchas cosas
 }
