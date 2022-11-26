@@ -16,7 +16,6 @@ public class Controller implements ActionListener {
 	public Controller() {
 		bos = new Bostinder();
 		iniciar();
-		System.out.println("si");
 	}
 
 	public void iniciar() {
