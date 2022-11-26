@@ -20,11 +20,11 @@ public class FrameRegistro extends JFrame {
 	private JButton volver, aceptar;
 	private JTextField j1, j2;
 
-	public FrameRegistro(ActionListener listener) {
+	public FrameRegistro(ActionListener listener, FileHandler handler) {
 		panel = new JPanel();
 		FileHandler.loadProperties(1);
-		volver = new JButton(FileHandler.getProperties().getProperty("persistence.FrameRegistro.vol"));
-		aceptar = new JButton(FileHandler.getProperties().getProperty("persistence.FrameRegistro.acep"));
+		volver = new JButton(handler.getProperties().getProperty("persistence.FrameRegistro.vol"));
+		aceptar = new JButton(handler.getProperties().getProperty("persistence.FrameRegistro.acep"));
 		j1 = new JTextField();
 		j2 = new JTextField();
 		botones = new JPanel();
@@ -45,8 +45,8 @@ public class FrameRegistro extends JFrame {
 		txi2.setLayout(new BorderLayout());
 		txi1.add(j1, BorderLayout.CENTER);
 		txi2.add(j2, BorderLayout.CENTER);
-		j1.setBorder(new TitledBorder(FileHandler.getProperties().getProperty("persistence.FrameRegistro.j1")));
-		j2.setBorder(new TitledBorder(FileHandler.getProperties().getProperty("persistence.FrameRegistro.j2")));
+		j1.setBorder(new TitledBorder(handler.getProperties().getProperty("persistence.FrameRegistro.j1")));
+		j2.setBorder(new TitledBorder(handler.getProperties().getProperty("persistence.FrameRegistro.j2")));
 		txt.add(txi1);
 		txt.add(txi2);
 		panel.setLayout(new BorderLayout());
@@ -58,5 +58,41 @@ public class FrameRegistro extends JFrame {
 		this.setDefaultCloseOperation(0);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.add(panel);
+	}
+
+	public JPanel getPanel() {
+		return panel;
+	}
+
+	public JPanel getBotones() {
+		return botones;
+	}
+
+	public JPanel getTxt() {
+		return txt;
+	}
+
+	public JPanel getTxi1() {
+		return txi1;
+	}
+
+	public JPanel getTxi2() {
+		return txi2;
+	}
+
+	public JButton getVolver() {
+		return volver;
+	}
+
+	public JButton getAceptar() {
+		return aceptar;
+	}
+
+	public JTextField getJ1() {
+		return j1;
+	}
+
+	public JTextField getJ2() {
+		return j2;
 	}
 }

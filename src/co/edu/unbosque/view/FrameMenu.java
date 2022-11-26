@@ -15,14 +15,23 @@ public class FrameMenu extends JFrame {
 
 	private JPanel panel;
 	private JButton botonInicioS, botonRegis, botonComoFun, botonConfi;
+	private FrameBostinder frbos;
+	private FrameHombre frhom;
+	private FrameConfiguracion frconfig;
+	private FrameRegistro frreg;
 
-	public FrameMenu(ActionListener listener) {
+	public FrameMenu(ActionListener listener, FileHandler handler) {
+		frhom = new FrameHombre(listener,handler);
+		frbos = new FrameBostinder(listener,handler,"");
+		frconfig = new FrameConfiguracion(listener,handler);
+		frreg = new FrameRegistro(listener,handler);
+		
 		panel = new JPanel();
 		FileHandler.loadProperties(1);
-		botonInicioS = new JButton(FileHandler.getProperties().getProperty("persistence.FrameMenu.botonInicioS"));
-		botonRegis = new JButton(FileHandler.getProperties().getProperty("persistence.FrameMenu.botonRegis"));
-		botonComoFun = new JButton(FileHandler.getProperties().getProperty("persistence.FrameMenu.botonComoFun"));
-		 botonConfi = new JButton(FileHandler.getProperties().getProperty("persistence.FrameMenu.botonConfi"));
+		botonInicioS = new JButton(handler.getProperties().getProperty("persistence.FrameMenu.botonInicioS"));
+		botonRegis = new JButton(handler.getProperties().getProperty("persistence.FrameMenu.botonRegis"));
+		botonComoFun = new JButton(handler.getProperties().getProperty("persistence.FrameMenu.botonComoFun"));
+		 botonConfi = new JButton(handler.getProperties().getProperty("persistence.FrameMenu.botonConfi"));
 		 this.setSize(350,505);
 		 this.setResizable(false);
 		 this.setLocationRelativeTo(null);
@@ -50,4 +59,41 @@ public class FrameMenu extends JFrame {
 		 this.add(panel);
 
 	}
+	public void abrirFrameHombre() {
+		this.setVisible(false);
+		frhom.setVisible(true);
+	}
+	
+	public void abrirFrameRegistro() {
+		this.setVisible(false);
+		frreg.setVisible(true);
+	}
+	public JPanel getPanel() {
+		return panel;
+	}
+	public JButton getBotonInicioS() {
+		return botonInicioS;
+	}
+	public JButton getBotonRegis() {
+		return botonRegis;
+	}
+	public JButton getBotonComoFun() {
+		return botonComoFun;
+	}
+	public JButton getBotonConfi() {
+		return botonConfi;
+	}
+	public FrameBostinder getFrbos() {
+		return frbos;
+	}
+	public FrameHombre getFrhom() {
+		return frhom;
+	}
+	public FrameConfiguracion getFrconfig() {
+		return frconfig;
+	}
+	public FrameRegistro getFrreg() {
+		return frreg;
+	}
+	
 }
