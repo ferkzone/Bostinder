@@ -61,7 +61,7 @@ public class FileHandler {
 			try {
 				file.createNewFile();
 			} catch (IOException e) {
-				System.out.println("canï¿½t create new file");
+				System.out.println("can´t create new file");
 				System.out.println(e.getMessage());
 			}
 		}
@@ -72,7 +72,7 @@ public class FileHandler {
 				content += reader.nextLine() + "\n";
 			}
 		} catch (FileNotFoundException e) {
-			System.out.println("file donï¿½t exists");
+			System.out.println("file don´t exists");
 			e.printStackTrace();
 		}
 		reader.close();
@@ -86,7 +86,7 @@ public class FileHandler {
 			try {
 				file.createNewFile();
 			} catch (IOException e) {
-				System.out.println("canï¿½t create new file");
+				System.out.println("can´t create new file");
 				System.out.println(e.getMessage());
 			}
 		}
@@ -94,7 +94,7 @@ public class FileHandler {
 			writer = new PrintWriter(file);
 			writer.print(content);
 		} catch (FileNotFoundException e) {
-			System.out.println("file donï¿½t exists");
+			System.out.println("file don´t exists");
 			e.printStackTrace();
 		}
 		writer.close();
@@ -120,7 +120,7 @@ public class FileHandler {
 	}
 	
 	public static Properties getProperties() {
-		return prop;		
+		return prop;
 	}
 	
 }

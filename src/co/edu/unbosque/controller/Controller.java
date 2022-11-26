@@ -3,34 +3,37 @@ package co.edu.unbosque.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import co.edu.unbosque.model.Bostinder;
+import co.edu.unbosque.model.persistence.FileHandler;
 import co.edu.unbosque.view.FrameConfiguracion;
 import co.edu.unbosque.view.FrameMenu;
 import co.edu.unbosque.view.FrameRegistro;
 
-public class Controller  implements ActionListener{
+public class Controller implements ActionListener {
 	private FrameMenu fm;
-	private Bostinder bos;
-	private FrameConfiguracion fg;
+	private FrameConfiguracion fcg;
 	private FrameRegistro fr;
-	
-	
+
 	public Controller() {
-	
-		bos = new Bostinder();
 		iniciar();
+		
 	}
-	
+
+	public void iniciar() {
+		fm = null;
+		fm = new FrameMenu(this);
+		fcg = null;
+		fcg = new FrameConfiguracion(this, null);
+		fr = null;
+		fr = new FrameRegistro(this);
+		FrameRegistro newframe = new FrameRegistro(this);
+		newframe.setVisible(true);
+
+	}
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 	
 		
-	}
-	
-	public void iniciar() {
-		fm = new FrameMenu(this, bos.getHandler());
-	}
 
-
-	
+	}
 }

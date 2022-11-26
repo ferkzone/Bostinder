@@ -20,13 +20,13 @@ public class FrameConfiguracion extends JFrame {
 	private JComboBox<String> idioma;
 	private JButton listo;
 
-	public FrameConfiguracion(ActionListener listener) {
+	public FrameConfiguracion(ActionListener listener, FileHandler juan) {
 		panel = new JPanel();
 		combo = new JPanel();
 		FileHandler.loadProperties(1);
 		temas = new JComboBox<String>();
 		idioma = new JComboBox<String>();
-		listo = new JButton(FileHandler.getProperties().getProperty("persitence.FrameConfiguracion.listo"));
+		listo = new JButton(juan.getProperties().getProperty("persitence.FrameConfiguracion.listo"));
 		temas.setBorder(
 				new TitledBorder(FileHandler.getProperties().getProperty("persitence.FrameConfiguracion.them")));
 		idioma.setBorder(
