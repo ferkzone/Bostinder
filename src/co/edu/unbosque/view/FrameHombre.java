@@ -34,6 +34,8 @@ public class FrameHombre extends JFrame {
 		setLayout(null);
 		setSize(480,300);
 		FileHandler.loadProperties(1);
+		setLocationRelativeTo(null);
+
 		labNombre = new JLabel("       Nombre");
 		labNombre.setBounds(1, 10, 150, 25);
 		labUser = new JLabel("       Usuario");
@@ -70,12 +72,12 @@ public class FrameHombre extends JFrame {
 		txtIngresos = new JTextField("");
 		txtIngresos.setForeground(Color.BLACK);
 		txtIngresos.setBackground(Color.WHITE);
-		txtIngresos.setBounds(280, 130, 150, 25);
+		txtIngresos.setBounds(280, 160, 150, 25);
 		
 		txtEstatura = new JTextField("");
 		txtEstatura.setForeground(Color.BLACK);
 		txtEstatura.setBackground(Color.WHITE);
-		txtEstatura.setBounds(280, 160, 150, 25);
+		txtEstatura.setBounds(280, 130, 150, 25);
 		
 		botonContinuar= new JButton(handler.getProperties().getProperty("persistence.FrameHombre.botonContinuar"));
 		botonContinuar.setBorder(new MatteBorder(1, 1, 1, 1, Color.BLACK));

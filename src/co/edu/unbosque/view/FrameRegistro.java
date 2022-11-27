@@ -24,6 +24,8 @@ public class FrameRegistro extends JFrame {
 		FileHandler.loadProperties(1);
 		volver = new JButton(handler.getProperties().getProperty("persistence.FrameRegistro.vol"));
 		aceptar = new JButton(handler.getProperties().getProperty("persistence.FrameRegistro.acep"));
+		volver.addActionListener(listener);
+		aceptar.addActionListener(listener);
 		j1 = new JTextField();
 		j2 = new JTextField();
 		botones = new JPanel();
@@ -39,6 +41,7 @@ public class FrameRegistro extends JFrame {
 		aceptar.setBorder(new MatteBorder(3, 3, 3, 3, Color.BLACK));
 		botones.add(volver);
 		botones.add(aceptar);
+
 		txt.setLayout(new GridLayout(2, 1));
 		txi1.setLayout(new BorderLayout());
 		txi2.setLayout(new BorderLayout());

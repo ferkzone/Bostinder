@@ -32,22 +32,15 @@ public class Controller implements ActionListener {
 			fm.abrirFrameTut();
 		}else if (e.getActionCommand().equals(fm.getBotonRegis().getActionCommand())) {
 			fm.abrirFrameGen();
+		}else if(e.getActionCommand().equals(fm.getFrg().getBoton().getActionCommand())) {
+			fm.abrirFramesGeneros();
 		}
 			
-		
-
 	}
 	
 	
 	
 	
-	public void abrirFrames() {
-		String opcion = fm.getFrg().getGeneroLista().getSelectedItem().toString();
-		if(opcion.equals("Hombre")) {
-			fm.abrirFrameHombre();
-		}else if(opcion.equals("Mujer")) {
-			fm.abrirFrameMujer();
-		}
-	}
+	
 	
 }

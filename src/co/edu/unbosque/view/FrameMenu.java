@@ -75,10 +75,18 @@ public class FrameMenu extends JFrame {
 	public void setFrg(FrameGenero frg) {
 		this.frg = frg;
 	}
+	public void abrirFramesGeneros() {
+		String opcion = frg.getGeneroLista().getSelectedItem().toString();
+		if(opcion.equals("Hombre")) {
+			abrirFrameHombre();
+		}else if(opcion.equals("Mujer")) {
+			abrirFrameMujer();
+		}
+	}
 
 
 	public void abrirFrameHombre() {
-		this.setVisible(false);
+		frg.setVisible(false);
 		frhom.setVisible(true);
 	}
 	
@@ -99,7 +107,7 @@ public class FrameMenu extends JFrame {
 		frg.setVisible(true);
 	}
 	public void abrirFrameMujer() {
-		this.setVisible(false);
+		frg.setVisible(false);
 		frmuj.setVisible(true);
 	}
 	public FrameTutorial getFrtut() {

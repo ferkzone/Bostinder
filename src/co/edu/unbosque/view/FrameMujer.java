@@ -35,10 +35,11 @@ public class FrameMujer extends JFrame {
 
 	
 	public FrameMujer(ActionListener listener, FileHandler handler) {
-		
+
 		setLayout(null);
 		setSize(480,300);
-		FileHandler.loadProperties(1);
+		handler.loadProperties(1);
+		setLocationRelativeTo(null);
 		labNombre = new JLabel("       Nombre");
 		labNombre.setBounds(1, 10, 150, 25);
 		labUser = new JLabel("       User");
@@ -53,25 +54,25 @@ public class FrameMujer extends JFrame {
 		labCorreo.setBounds(1, 160, 150, 25);
 
 		
-		txtNombre = new JTextField("");
+		txtNombre = new JTextField();
 		txtNombre.setForeground(Color.BLACK);
 		txtNombre.setBackground(Color.WHITE);
 		txtNombre.setBounds(280, 10, 150, 25);
 		
-		txtCorreo = new JTextField("");
+		txtCorreo = new JTextField();
 		txtCorreo.setForeground(Color.BLACK);
 		txtCorreo.setBackground(Color.WHITE);
-		txtCorreo.setBounds(280, 40, 150, 25);
+		txtCorreo.setBounds(280, 160, 150, 25);
 		
-		txtUser = new JTextField("");
+		txtUser = new JTextField();
 		txtUser.setForeground(Color.BLACK);
 		txtUser.setBackground(Color.WHITE);
-		txtUser.setBounds(280, 70, 150, 25);
+		txtUser.setBounds(280, 40, 150, 25);
 		
-		si =new JRadioButton("si",true);
-		si.setBounds(280, 100, 70, 25);
-		no =new JRadioButton("no",true);
-		no.setBounds(380, 100, 70, 25);
+		si =new JRadioButton("Si",true);
+		si.setBounds(280, 130, 70, 25);
+		no =new JRadioButton("No",true);
+		no.setBounds(380, 130, 70, 25);
 		ButtonGroup bg=new ButtonGroup();    
 		bg.add(si);
 		bg.add(no);
@@ -79,15 +80,15 @@ public class FrameMujer extends JFrame {
 		add(no);
 
 		
-		txtFecha = new JTextField("");
+		txtFecha = new JTextField();
 		txtFecha.setForeground(Color.BLACK);
 		txtFecha.setBackground(Color.WHITE);
-		txtFecha.setBounds(280, 130, 150, 25);
+		txtFecha.setBounds(280, 70, 150, 25);
 		
-		txtEstatura = new JTextField("");
+		txtEstatura = new JTextField();
 		txtEstatura.setForeground(Color.BLACK);
 		txtEstatura.setBackground(Color.WHITE);
-		txtEstatura.setBounds(280, 160, 150, 25);
+		txtEstatura.setBounds(280, 100, 150, 25);
 
 		
 		botonContinuar= new JButton(handler.getProperties().getProperty("persistence.FrameHombre.botonContinuar"));
