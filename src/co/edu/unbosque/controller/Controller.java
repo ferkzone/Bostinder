@@ -25,7 +25,7 @@ public class Controller implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals(fm.getBotonInicioS().getActionCommand())) {
-			fm.abrirFrameRegistro();
+			fm.abrirFrameRegistro();			
 		}else if(e.getActionCommand().equals(fm.getBotonConfi().getActionCommand())) {
 			fm.abrirFrameConfig();
 		}else if (e.getActionCommand().equals(fm.getBotonComoFun().getActionCommand())) {
@@ -37,4 +37,17 @@ public class Controller implements ActionListener {
 		
 
 	}
+	
+	
+	
+	
+	public void abrirFrames() {
+		String opcion = fm.getFrg().getGeneroLista().getSelectedItem().toString();
+		if(opcion.equals("Hombre")) {
+			fm.abrirFrameHombre();
+		}else if(opcion.equals("Mujer")) {
+			fm.abrirFrameMujer();
+		}
+	}
+	
 }

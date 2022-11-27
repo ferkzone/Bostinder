@@ -33,7 +33,7 @@ public class FrameMenu extends JFrame {
 		frg = new FrameGenero(listener,handler);
 		
 		panel = new JPanel();
-		FileHandler.loadProperties(1);
+		handler.loadProperties(1);
 		botonInicioS = new JButton(handler.getProperties().getProperty("persistence.FrameMenu.botonInicioS"));
 		botonRegis = new JButton(handler.getProperties().getProperty("persistence.FrameMenu.botonRegis"));
 		botonComoFun = new JButton(handler.getProperties().getProperty("persistence.FrameMenu.botonComoFun"));
@@ -67,6 +67,16 @@ public class FrameMenu extends JFrame {
 	}
 	
 
+	public FrameGenero getFrg() {
+		return frg;
+	}
+
+
+	public void setFrg(FrameGenero frg) {
+		this.frg = frg;
+	}
+
+
 	public void abrirFrameHombre() {
 		this.setVisible(false);
 		frhom.setVisible(true);
@@ -87,6 +97,10 @@ public class FrameMenu extends JFrame {
 	public void abrirFrameGen() {
 		this.setVisible(false);
 		frg.setVisible(true);
+	}
+	public void abrirFrameMujer() {
+		this.setVisible(false);
+		frmuj.setVisible(true);
 	}
 	public FrameTutorial getFrtut() {
 		return frtut;

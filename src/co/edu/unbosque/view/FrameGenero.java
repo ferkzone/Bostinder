@@ -51,15 +51,9 @@ public class FrameGenero extends JFrame {
 		add(boton);
 
 	}
-	public void abrirFrameGenero(FrameHombre fr) {
-		String opcion = generoLista.getSelectedItem().toString();
-		if(opcion.equals(opcionGenero[0])) {
-			fr.setVisible(true);
-			this.setVisible(false);
-		}
-		
-	}
-
+	
+	
+	
 	public JLabel getTxtLabel() {
 		return txtLabel;
 	}
