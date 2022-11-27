@@ -32,9 +32,9 @@ public class Controller implements ActionListener {
 			fm.abrirFrameTut();
 		}else if (e.getActionCommand().equals(fm.getBotonRegis().getActionCommand())) {
 			fm.abrirFrameGen();
-		}else if(e.getActionCommand().equals(fm.getFrg().getBoton().getActionCommand())) {
+		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameGenero.boton"))) {
 			fm.abrirFramesGeneros();
-		}
+		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameGenero.boton"))))
 			
 	}
 	
