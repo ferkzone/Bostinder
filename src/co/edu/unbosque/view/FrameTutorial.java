@@ -24,7 +24,6 @@ public class FrameTutorial extends JFrame {
 		panel = new JPanel();
 		botones = new JPanel();
 		img = new JLabel();
-		panel.add(img);
 		handler.loadProperties(1);
 		atras = new JButton(handler.getProperties().getProperty("persistence.FrameTutorial.atras"));
 		botones.setLayout(new GridLayout(1, 3));
@@ -38,6 +37,7 @@ public class FrameTutorial extends JFrame {
 		this.setLocationRelativeTo(null);
 		img.setIcon(new ImageIcon((new ImageIcon("src/co/edu/unbosque/util/images/53325ad6d5c1765a04735d8f34871f69.png")).getImage()
 				.getScaledInstance(350, 100, Image.SCALE_DEFAULT)));
+		panel.add(img);
 		this.add(panel);
 	
 	}
