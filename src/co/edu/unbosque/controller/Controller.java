@@ -30,6 +30,8 @@ public class Controller implements ActionListener {
 			fm.abrirFrameRegistro();
 		}else if(e.getActionCommand().equals(fm.getBotonConfi().getActionCommand())) {
 			fm.abrirFrameConfig();
+		}else if (e.getActionCommand().equals(fm.getBotonComoFun().getActionCommand())) {
+			fm.abrirFrameTut();
 		}
 			
 		

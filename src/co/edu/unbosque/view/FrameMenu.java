@@ -76,6 +76,13 @@ public class FrameMenu extends JFrame {
 		this.setVisible(false);
 		frconfig.setVisible(true);
 	}
+	public void abrirFrameTut() {
+		this.setVisible(false);
+		frtut.setVisible(true);
+	}
+	public FrameTutorial getFrtut() {
+		return frtut;
+	}
 	public JPanel getPanel() {
 		return panel;
 	}
