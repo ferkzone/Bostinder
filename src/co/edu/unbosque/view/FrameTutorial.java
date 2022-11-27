@@ -25,8 +25,6 @@ public class FrameTutorial extends JFrame {
 		botones.setLayout(new GridLayout(1, 3));
 		botones.add(atras);
 		atras.addActionListener(listener);
-		botones.add(atras);
-		atras.addActionListener(listener);
 		panel.setLayout(new BorderLayout());
 		panel.add(botones, BorderLayout.SOUTH);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);

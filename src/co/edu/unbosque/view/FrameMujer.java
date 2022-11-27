@@ -3,10 +3,11 @@ package co.edu.unbosque.view;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.border.MatteBorder;
 
@@ -15,217 +16,215 @@ import co.edu.unbosque.model.persistence.FileHandler;
 public class FrameMujer extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
-	private JLabel nombreLabel;
-	private JLabel usuarioLabel;
-	private JLabel fechaLabel;
-	private JLabel estaturaLabel;
-	private JLabel divorciosLabel;
-	private JLabel correoLabel;
-	
-	private JTextField correoTxt;
-	private JTextField nombreTxt;
-	private JTextField usuarioTxt;
-	private JTextField fechaTxt;
-	private JTextField estaturaTxt;
+	private JLabel labNombre;
+	private JLabel labUser;
+	private JLabel labFecha;
+	private JLabel labEstatura;
+	private JLabel labDivorcio;
+	private JLabel labCorreo;
+	private JTextField txtCorreo;
+	private JTextField txtNombre;
+	private JTextField txtUser;
+	private JTextField txtIngresos;
+	private JTextField txtFecha;
+	private JTextField txtEstatura;
+	private JButton botonContinuar;
+	private JRadioButton si;
+	private JRadioButton no;
 
-	private JButton buttContinuar;
-	
-	private String[] opcionDivorcios;
-	private JComboBox divorciosLista;
+
 	
 	public FrameMujer(ActionListener listener, FileHandler handler) {
+		
 		setLayout(null);
 		setSize(480,300);
 		FileHandler.loadProperties(1);
-		nombreLabel = new JLabel("       Nombre");
-		nombreLabel.setBounds(1, 10, 150, 25);
-		usuarioLabel = new JLabel("       Usuario");
-		usuarioLabel.setBounds(1, 40, 150, 25);
-		fechaLabel = new JLabel("       Fecha de nacimiento");
-		fechaLabel.setBounds(1, 70, 150, 25);
-		correoLabel = new JLabel("       Correo");
-		correoLabel.setBounds(1, 100, 150, 25);
-		estaturaLabel = new JLabel("       Estatura");
-		estaturaLabel.setBounds(1, 130, 150, 25);
-		divorciosLabel = new JLabel("       Divorcios");
-		divorciosLabel.setBounds(1, 160, 150, 25);
+		labNombre = new JLabel("       Nombre");
+		labNombre.setBounds(1, 10, 150, 25);
+		labUser = new JLabel("       User");
+		labUser.setBounds(1, 40, 150, 25);
+		labFecha = new JLabel("       Fecha de nacimiento");
+		labFecha.setBounds(1, 70, 150, 25);
+		labEstatura = new JLabel("       Estatura");
+		labEstatura.setBounds(1, 100, 150, 25);
+		labDivorcio = new JLabel("       Divorcios");
+		labDivorcio.setBounds(1, 130, 150, 25);
+		labCorreo = new JLabel("       Correo");
+		labCorreo.setBounds(1, 160, 150, 25);
+
 		
-		nombreTxt = new JTextField("");
-		nombreTxt.setForeground(Color.BLACK);
-		nombreTxt.setBackground(Color.WHITE);
-		nombreTxt.setBounds(280, 10, 150, 25);
+		txtNombre = new JTextField("");
+		txtNombre.setForeground(Color.BLACK);
+		txtNombre.setBackground(Color.WHITE);
+		txtNombre.setBounds(280, 10, 150, 25);
 		
-		usuarioTxt = new JTextField("");
-		usuarioTxt.setForeground(Color.BLACK);
-		usuarioTxt.setBackground(Color.WHITE);
-		usuarioTxt.setBounds(280, 40, 150, 25);
+		txtCorreo = new JTextField("");
+		txtCorreo.setForeground(Color.BLACK);
+		txtCorreo.setBackground(Color.WHITE);
+		txtCorreo.setBounds(280, 40, 150, 25);
 		
-		fechaTxt = new JTextField("");
-		fechaTxt.setForeground(Color.BLACK);
-		fechaTxt.setBackground(Color.WHITE);
-		fechaTxt.setBounds(280, 70, 150, 25);
+		txtUser = new JTextField("");
+		txtUser.setForeground(Color.BLACK);
+		txtUser.setBackground(Color.WHITE);
+		txtUser.setBounds(280, 70, 150, 25);
 		
-		correoTxt = new JTextField("");
-		correoTxt.setForeground(Color.BLACK);
-		correoTxt.setBackground(Color.WHITE);
-		correoTxt.setBounds(280, 130, 150, 25);
+		si =new JRadioButton("si",true);
+		si.setBounds(280, 100, 70, 25);
+		no =new JRadioButton("no",true);
+		no.setBounds(380, 100, 70, 25);
+		ButtonGroup bg=new ButtonGroup();    
+		bg.add(si);
+		bg.add(no);
+		add(si);
+		add(no);
+
 		
-		estaturaTxt = new JTextField("");
-		estaturaTxt.setForeground(Color.BLACK);
-		estaturaTxt.setBackground(Color.WHITE);
-		estaturaTxt.setBounds(280, 160, 150, 25);
+		txtFecha = new JTextField("");
+		txtFecha.setForeground(Color.BLACK);
+		txtFecha.setBackground(Color.WHITE);
+		txtFecha.setBounds(280, 130, 150, 25);
 		
-		buttContinuar = new JButton(handler.getProperties().getProperty("persistence.FrameMujer.buttContinuar"));
-		buttContinuar.setBorder(new MatteBorder(1, 1, 1, 1, Color.BLACK));
-		buttContinuar.setBackground(Color.WHITE);
-		buttContinuar.setBounds(180, 200, 100, 30);
-		buttContinuar.addActionListener(listener);
+		txtEstatura = new JTextField("");
+		txtEstatura.setForeground(Color.BLACK);
+		txtEstatura.setBackground(Color.WHITE);
+		txtEstatura.setBounds(280, 160, 150, 25);
+
 		
-		opcionDivorcios = new String[2];
-		opcionDivorcios[0] = "Si";
-		opcionDivorcios[1] = "No";
-		
-		divorciosLista = new JComboBox(opcionDivorcios);
-		divorciosLista.setForeground(Color.BLACK);
-		divorciosLista.setBackground(Color.WHITE);
-		divorciosLista.setBounds(280, 160, 150, 25);
-		
-		add(nombreLabel);
-		add(nombreTxt);
-		add(nombreTxt);
-		add(usuarioLabel);
-		add(usuarioTxt);
-		add(usuarioTxt);
-		add(fechaLabel);
-		add(fechaTxt);
-		add(fechaTxt);
-		add(correoLabel);
-		add(correoTxt);
-		add(correoTxt);
-		add(estaturaLabel);
-		add(estaturaTxt);
-		add(estaturaTxt);
-		add(divorciosLabel);
-		add(divorciosLista);
-		add(divorciosLista);
-		add(buttContinuar);
+		botonContinuar= new JButton(handler.getProperties().getProperty("persistence.FrameHombre.botonContinuar"));
+		botonContinuar.setBorder(new MatteBorder(1, 1, 1, 1, Color.BLACK));
+		botonContinuar.setBackground(Color.WHITE);
+		botonContinuar.setBounds(180, 200, 100, 30);
+		botonContinuar.addActionListener(listener);
+
+		add(labNombre);
+		add(txtNombre);
+		add(txtNombre);
+		add(labUser);
+		add(txtUser);
+		add(txtUser);
+		add(labFecha);
+		add(txtFecha);
+		add(txtFecha);
+		add(labCorreo);
+		add(txtCorreo);
+		add(txtCorreo);
+		add(labEstatura);
+		add(txtEstatura);
+		add(txtEstatura);
+		add(labDivorcio);
+		add(botonContinuar);
 
 	}
 
-	public JLabel getNombreLabel() {
-		return nombreLabel;
+	public JLabel getLabNombre() {
+		return labNombre;
 	}
 
-	public void setNombreLabel(JLabel nombreLabel) {
-		this.nombreLabel = nombreLabel;
+	public void setLabNombre(JLabel labNombre) {
+		this.labNombre = labNombre;
 	}
 
-	public JLabel getUsuarioLabel() {
-		return usuarioLabel;
+	public JLabel getLabUser() {
+		return labUser;
 	}
 
-	public void setUsuarioLabel(JLabel usuarioLabel) {
-		this.usuarioLabel = usuarioLabel;
+	public void setLabUser(JLabel labUser) {
+		this.labUser = labUser;
 	}
 
-	public JLabel getFechaLabel() {
-		return fechaLabel;
+	public JLabel getLabFecha() {
+		return labFecha;
 	}
 
-	public void setFechaLabel(JLabel fechaLabel) {
-		this.fechaLabel = fechaLabel;
+	public void setLabFecha(JLabel labFecha) {
+		this.labFecha = labFecha;
 	}
 
-	public JLabel getEstaturaLabel() {
-		return estaturaLabel;
+	public JLabel getLabEstatura() {
+		return labEstatura;
 	}
 
-	public void setEstaturaLabel(JLabel estaturaLabel) {
-		this.estaturaLabel = estaturaLabel;
+	public void setLabEstatura(JLabel labEstatura) {
+		this.labEstatura = labEstatura;
 	}
 
-	public JLabel getDivorciosLabel() {
-		return divorciosLabel;
+	public JLabel getLabDivorcio() {
+		return labDivorcio;
 	}
 
-	public void setDivorciosLabel(JLabel divorciosLabel) {
-		this.divorciosLabel = divorciosLabel;
+	public void setLabIngresos(JLabel labDivorcio) {
+		this.labDivorcio = labDivorcio;
 	}
 
-	public JLabel getCorreoLabel() {
-		return correoLabel;
+	public JLabel getLabCorreo() {
+		return labCorreo;
 	}
 
-	public void setCorreoLabel(JLabel correoLabel) {
-		this.correoLabel = correoLabel;
+	public void setLabCorreo(JLabel labCorreo) {
+		this.labCorreo = labCorreo;
 	}
 
-	public JTextField getCorreoTxt() {
-		return correoTxt;
+	public JTextField getTxtCorreo() {
+		return txtCorreo;
 	}
 
-	public void setCorreoTxt(JTextField correoTxt) {
-		this.correoTxt = correoTxt;
+	public void setTxtCorreo(JTextField txtCorreo) {
+		this.txtCorreo = txtCorreo;
 	}
 
-	public JTextField getNombreTxt() {
-		return nombreTxt;
+	public JTextField getTxtNombre() {
+		return txtNombre;
 	}
 
-	public void setNombreTxt(JTextField nombreTxt) {
-		this.nombreTxt = nombreTxt;
+	public void setTxtNombre(JTextField txtNombre) {
+		this.txtNombre = txtNombre;
 	}
 
-	public JTextField getUsuarioTxt() {
-		return usuarioTxt;
+	public JTextField getTxtUser() {
+		return txtUser;
 	}
 
-	public void setUsuarioTxt(JTextField usuarioTxt) {
-		this.usuarioTxt = usuarioTxt;
+	public void setTxtUser(JTextField txtUser) {
+		this.txtUser = txtUser;
 	}
 
-	public String[] getOpcionDivorcios() {
-		return opcionDivorcios;
+	public JTextField getTxtIngresos() {
+		return txtIngresos;
 	}
 
-	public void setOpcionDivorcios(String[] opcionDivorcios) {
-		this.opcionDivorcios = opcionDivorcios;
+	public void setTxtIngresos(JTextField txtIngresos) {
+		this.txtIngresos = txtIngresos;
 	}
 
-	public JComboBox getDivorciosLista() {
-		return divorciosLista;
+	public JTextField getTxtFecha() {
+		return txtFecha;
 	}
 
-	public void setDivorciosLista(JComboBox divorciosLista) {
-		this.divorciosLista = divorciosLista;
+	public void setTxtFecha(JTextField txtFecha) {
+		this.txtFecha = txtFecha;
 	}
 
-	public JTextField getFechaTxt() {
-		return fechaTxt;
+	public JTextField getTxtEstatura() {
+		return txtEstatura;
 	}
 
-	public void setFechaTxt(JTextField fechaTxt) {
-		this.fechaTxt = fechaTxt;
+	public void setTxtEstatura(JTextField txtEstatura) {
+		this.txtEstatura = txtEstatura;
 	}
 
-	public JTextField getEstaturaTxt() {
-		return estaturaTxt;
+	public JButton getBotonContinuar() {
+		return botonContinuar;
 	}
 
-	public void setEstaturaTxt(JTextField estaturaTxt) {
-		this.estaturaTxt = estaturaTxt;
-	}
-
-	public JButton getButtContinuar() {
-		return buttContinuar;
-	}
-
-	public void setButtContinuar(JButton buttContinuar) {
-		this.buttContinuar = buttContinuar;
+	public void setBotonContinuar(JButton botonContinuar) {
+		this.botonContinuar = botonContinuar;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+
+	
 
 }

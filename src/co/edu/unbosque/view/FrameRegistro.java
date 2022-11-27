@@ -14,7 +14,6 @@ import javax.swing.border.MatteBorder;
 import javax.swing.border.TitledBorder;
 import co.edu.unbosque.model.persistence.FileHandler;
 
-@SuppressWarnings("serial")
 public class FrameRegistro extends JFrame {
 	private JPanel panel, botones, txt, txi1, txi2;
 	private JButton volver, aceptar;

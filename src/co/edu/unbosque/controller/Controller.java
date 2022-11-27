@@ -20,8 +20,6 @@ public class Controller implements ActionListener {
 
 	public void iniciar() {
 		fm = new FrameMenu(this,bos.getHandler());
-
-
 	}
 
 	@Override
@@ -32,6 +30,8 @@ public class Controller implements ActionListener {
 			fm.abrirFrameConfig();
 		}else if (e.getActionCommand().equals(fm.getBotonComoFun().getActionCommand())) {
 			fm.abrirFrameTut();
+		}else if (e.getActionCommand().equals(fm.getBotonRegis().getActionCommand())) {
+			fm.abrirFrameGen();
 		}
 			
 		
