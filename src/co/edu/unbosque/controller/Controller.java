@@ -19,6 +19,7 @@ public class Controller implements ActionListener {
 	}
 
 	public void iniciar() {
+		bos.getMujer().añadirMujeres();
 		fm = new FrameMenu(this,bos.getHandler());
 	}
 
@@ -34,7 +35,13 @@ public class Controller implements ActionListener {
 			fm.abrirFrameGen();
 		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameGenero.boton"))) {
 			fm.abrirFramesGeneros();
-		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameGenero.boton"))))
+		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameRegistro.vol"))){
+			fm.getFrreg().setVisible(false);
+			fm.setVisible(true);
+		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameTutorial.atras"))){
+			fm.getFrtut().setVisible(false);
+			fm.setVisible(true);
+		}
 			
 	}
 	
