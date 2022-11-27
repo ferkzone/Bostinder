@@ -19,12 +19,14 @@ public class FrameMenu extends JFrame {
 	private FrameHombre frhom;
 	private FrameConfiguracion frconfig;
 	private FrameRegistro frreg;
+	private FrameTutorial frtut;
 
 	public FrameMenu(ActionListener listener, FileHandler handler) {
 		frhom = new FrameHombre(listener,handler);
 		frbos = new FrameBostinder(listener,handler,"");
 		frconfig = new FrameConfiguracion(listener,handler);
 		frreg = new FrameRegistro(listener,handler);
+		frtut = new FrameTutorial(listener,handler);
 		
 		panel = new JPanel();
 		FileHandler.loadProperties(1);
@@ -59,6 +61,8 @@ public class FrameMenu extends JFrame {
 		 this.add(panel);
 
 	}
+	
+
 	public void abrirFrameHombre() {
 		this.setVisible(false);
 		frhom.setVisible(true);
@@ -67,6 +71,10 @@ public class FrameMenu extends JFrame {
 	public void abrirFrameRegistro() {
 		this.setVisible(false);
 		frreg.setVisible(true);
+	}
+	public void abrirFrameConfig() {
+		this.setVisible(false);
+		frconfig.setVisible(true);
 	}
 	public JPanel getPanel() {
 		return panel;

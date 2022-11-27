@@ -29,7 +29,7 @@ public class Controller implements ActionListener {
 		if(e.getActionCommand().equals(fm.getBotonInicioS().getActionCommand())) {
 			fm.abrirFrameRegistro();
 		}else if(e.getActionCommand().equals(fm.getBotonConfi().getActionCommand())) {
-			
+			fm.abrirFrameConfig();
 		}
 			
 		

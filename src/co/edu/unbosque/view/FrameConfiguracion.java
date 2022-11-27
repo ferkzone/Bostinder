@@ -2,8 +2,11 @@ package co.edu.unbosque.view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -20,21 +23,18 @@ public class FrameConfiguracion extends JFrame {
 	private JComboBox<String> idioma;
 	private JButton listo;
 
-	public FrameConfiguracion(ActionListener listener, FileHandler juan) {
+	public FrameConfiguracion(ActionListener listener, FileHandler handler) {
 		panel = new JPanel();
 		combo = new JPanel();
-		FileHandler.loadProperties(1);
 		temas = new JComboBox<String>();
 		idioma = new JComboBox<String>();
-		listo = new JButton(juan.getProperties().getProperty("persitence.FrameConfiguracion.listo"));
-		temas.setBorder(
-				new TitledBorder(FileHandler.getProperties().getProperty("persitence.FrameConfiguracion.them")));
-		idioma.setBorder(
-				new TitledBorder(FileHandler.getProperties().getProperty("persitence.FrameConfiguracion.leng")));
-		temas.addItem("Claro");
+		listo = new JButton(handler.getProperties().getProperty("persitence.FrameConfiguracion.listo"));
+		temas.setBorder(new TitledBorder(handler.getProperties().getProperty("persitence.FrameConfiguracion.them")));
+		idioma.setBorder(new TitledBorder(handler.getProperties().getProperty("persitence.FrameConfiguracion.leng")));
 		temas.addItem("Oscuro");
-		idioma.addItem(FileHandler.getProperties().getProperty("persitence.FrameConfiguracion.esp"));
-		idioma.addItem(FileHandler.getProperties().getProperty("persitence.FrameConfiguracion.ing"));
+		temas.addItem("Claro");
+		idioma.addItem(handler.getProperties().getProperty("persitence.FrameConfiguracion.esp"));
+		idioma.addItem(handler.getProperties().getProperty("persitence.FrameConfiguracion.ing"));
 		combo.setLayout(new GridLayout(1, 2));
 		combo.add(temas);
 		combo.add(idioma);
@@ -49,7 +49,7 @@ public class FrameConfiguracion extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(0);
 		this.add(panel);
-
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 
 }
