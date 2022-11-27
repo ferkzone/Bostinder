@@ -16,12 +16,15 @@ public class FrameMenu extends JFrame {
 	private JPanel panel;
 	private JButton botonInicioS, botonRegis, botonComoFun, botonConfi;
 	private FrameBostinder frbos;
+	private FrameGenero frg;
 	private FrameHombre frhom;
+	private FrameMujer frmuj;
 	private FrameConfiguracion frconfig;
 	private FrameRegistro frreg;
 
 	public FrameMenu(ActionListener listener, FileHandler handler) {
 		frhom = new FrameHombre(listener,handler);
+		frmuj = new FrameMujer(listener,handler);
 		frbos = new FrameBostinder(listener,handler,"");
 		frconfig = new FrameConfiguracion(listener,handler);
 		frreg = new FrameRegistro(listener,handler);
