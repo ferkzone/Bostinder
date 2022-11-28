@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import co.edu.unbosque.model.Bostinder;
+import co.edu.unbosque.model.DatosIncompletosException;
 import co.edu.unbosque.model.persistence.FileHandler;
 import co.edu.unbosque.view.FrameConfiguracion;
 import co.edu.unbosque.view.FrameMenu;
@@ -41,6 +42,26 @@ public class Controller implements ActionListener {
 		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameTutorial.atras"))){
 			fm.getFrtut().setVisible(false);
 			fm.setVisible(true);
+		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameMujer.botonContinuar"))) {
+			
+			String nombre = fm.getFrmuj().getTxtNombre().getText();
+			String usuario = fm.getFrmuj().getTxtUser().getText();
+			boolean divorcios = true;
+			if(fm.getFrmuj().getSi().isSelected()) {
+				 divorcios = true;
+			}else if(fm.getFrmuj().getNo().isSelected()) {
+				 divorcios = false;
+			}
+			String correo = fm.getFrmuj().getTxtCorreo().getText();
+			try {
+				double estatura = Double.parseDouble(fm.getFrmuj().getTxtEstatura().getText());
+				bos.getMujer().añadirMujeres(nombre, "", 0, estatura, 0, divorcios, correo);
+			} catch (DatosIncompletosException e1) {
+				// TODO Auto-generated catch block
+				fm.mostrarMensaje("No puede haber un dato en blanco!");
+			}catch(NumberFormatException en) {
+				fm.mostrarMensaje("Escribe un número en estatura!");
+			}
 		}
 			
 	}

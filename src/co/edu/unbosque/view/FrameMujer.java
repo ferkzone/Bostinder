@@ -11,6 +11,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.border.MatteBorder;
 
+import com.toedter.calendar.JDateChooser;
+
 import co.edu.unbosque.model.persistence.FileHandler;
 
 public class FrameMujer extends JFrame {
@@ -26,7 +28,7 @@ public class FrameMujer extends JFrame {
 	private JTextField txtNombre;
 	private JTextField txtUser;
 	private JTextField txtIngresos;
-	private JTextField txtFecha;
+	private JDateChooser calendar;
 	private JTextField txtEstatura;
 	private JButton botonContinuar;
 	private JRadioButton si;
@@ -40,9 +42,10 @@ public class FrameMujer extends JFrame {
 		setSize(480,300);
 		handler.loadProperties(1);
 		setLocationRelativeTo(null);
+		calendar = new JDateChooser();
 		labNombre = new JLabel("       Nombre");
 		labNombre.setBounds(1, 10, 150, 25);
-		labUser = new JLabel("       User");
+		labUser = new JLabel("       Usuario");
 		labUser.setBounds(1, 40, 150, 25);
 		labFecha = new JLabel("       Fecha de nacimiento");
 		labFecha.setBounds(1, 70, 150, 25);
@@ -54,17 +57,17 @@ public class FrameMujer extends JFrame {
 		labCorreo.setBounds(1, 160, 150, 25);
 
 		
-		txtNombre = new JTextField();
+		txtNombre = new JTextField("");
 		txtNombre.setForeground(Color.BLACK);
 		txtNombre.setBackground(Color.WHITE);
 		txtNombre.setBounds(280, 10, 150, 25);
 		
-		txtCorreo = new JTextField();
+		txtCorreo = new JTextField(" ");
 		txtCorreo.setForeground(Color.BLACK);
 		txtCorreo.setBackground(Color.WHITE);
 		txtCorreo.setBounds(280, 160, 150, 25);
 		
-		txtUser = new JTextField();
+		txtUser = new JTextField("");
 		txtUser.setForeground(Color.BLACK);
 		txtUser.setBackground(Color.WHITE);
 		txtUser.setBounds(280, 40, 150, 25);
@@ -79,19 +82,16 @@ public class FrameMujer extends JFrame {
 		add(si);
 		add(no);
 
+		calendar.setBounds(280, 70, 150, 25);
+	
 		
-		txtFecha = new JTextField();
-		txtFecha.setForeground(Color.BLACK);
-		txtFecha.setBackground(Color.WHITE);
-		txtFecha.setBounds(280, 70, 150, 25);
-		
-		txtEstatura = new JTextField();
+		txtEstatura = new JTextField("");
 		txtEstatura.setForeground(Color.BLACK);
 		txtEstatura.setBackground(Color.WHITE);
 		txtEstatura.setBounds(280, 100, 150, 25);
 
 		
-		botonContinuar= new JButton(handler.getProperties().getProperty("persistence.FrameHombre.botonContinuar"));
+		botonContinuar= new JButton(handler.getProperties().getProperty("persistence.FrameMujer.botonContinuar"));
 		botonContinuar.setBorder(new MatteBorder(1, 1, 1, 1, Color.BLACK));
 		botonContinuar.setBackground(Color.WHITE);
 		botonContinuar.setBounds(180, 200, 100, 30);
@@ -104,8 +104,7 @@ public class FrameMujer extends JFrame {
 		add(txtUser);
 		add(txtUser);
 		add(labFecha);
-		add(txtFecha);
-		add(txtFecha);
+		add(calendar);
 		add(labCorreo);
 		add(txtCorreo);
 		add(txtCorreo);
@@ -123,6 +122,22 @@ public class FrameMujer extends JFrame {
 
 	public void setLabNombre(JLabel labNombre) {
 		this.labNombre = labNombre;
+	}
+
+	public JRadioButton getSi() {
+		return si;
+	}
+
+	public void setSi(JRadioButton si) {
+		this.si = si;
+	}
+
+	public JRadioButton getNo() {
+		return no;
+	}
+
+	public void setNo(JRadioButton no) {
+		this.no = no;
 	}
 
 	public JLabel getLabUser() {
@@ -197,13 +212,7 @@ public class FrameMujer extends JFrame {
 		this.txtIngresos = txtIngresos;
 	}
 
-	public JTextField getTxtFecha() {
-		return txtFecha;
-	}
-
-	public void setTxtFecha(JTextField txtFecha) {
-		this.txtFecha = txtFecha;
-	}
+	
 
 	public JTextField getTxtEstatura() {
 		return txtEstatura;

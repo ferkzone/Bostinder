@@ -35,9 +35,8 @@ public class FrameTutorial extends JFrame {
 		this.setSize(700, 500);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
-		img.setIcon(new ImageIcon((new ImageIcon("src/co/edu/unbosque/util/imagenes/53325ad6d5c1765a04735d8f34871f69.jpg")).getImage()
-				.getScaledInstance(500, 400, Image.SCALE_DEFAULT)));
-		
+		img.setIcon(new ImageIcon((new ImageIcon("src/co/edu/unbosque/util/images/refresco1.jpg")).getImage()
+				.getScaledInstance(687, 550, Image.SCALE_DEFAULT )));
 		panel.add(img);
 		
 		this.add(panel);

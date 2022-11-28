@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.border.MatteBorder;
 
+import com.toedter.calendar.JDateChooser;
+
 import co.edu.unbosque.model.persistence.FileHandler;
 
 public class FrameHombre extends JFrame {
@@ -26,7 +28,7 @@ public class FrameHombre extends JFrame {
 	private JTextField txtNombre;
 	private JTextField txtUser;
 	private JTextField txtIngresos;
-	private JTextField txtFecha;
+	private JDateChooser calendar;
 	private JTextField txtEstatura;
 	private JButton botonContinuar;
 	
@@ -35,7 +37,7 @@ public class FrameHombre extends JFrame {
 		setSize(480,300);
 		FileHandler.loadProperties(1);
 		setLocationRelativeTo(null);
-
+		calendar = new JDateChooser();
 		labNombre = new JLabel("       Nombre");
 		labNombre.setBounds(1, 10, 150, 25);
 		labUser = new JLabel("       Usuario");
@@ -59,10 +61,7 @@ public class FrameHombre extends JFrame {
 		txtUser.setBackground(Color.WHITE);
 		txtUser.setBounds(280, 40, 150, 25);
 		
-		txtFecha = new JTextField("");
-		txtFecha.setForeground(Color.BLACK);
-		txtFecha.setBackground(Color.WHITE);
-		txtFecha.setBounds(280, 70, 150, 25);
+		calendar.setBounds(280, 70, 150, 25);
 		
 		txtCorreo = new JTextField("");
 		txtCorreo.setForeground(Color.BLACK);
@@ -84,7 +83,7 @@ public class FrameHombre extends JFrame {
 		botonContinuar.setBackground(Color.WHITE);
 		botonContinuar.setBounds(180, 200, 100, 30);
 		botonContinuar.addActionListener(listener);
-
+		
 		add(labNombre);
 		add(txtNombre);
 		add(txtNombre);
@@ -92,8 +91,6 @@ public class FrameHombre extends JFrame {
 		add(txtUser);
 		add(txtUser);
 		add(labFecha);
-		add(txtFecha);
-		add(txtFecha);
 		add(labCorreo);
 		add(txtCorreo);
 		add(txtCorreo);
@@ -104,7 +101,7 @@ public class FrameHombre extends JFrame {
 		add(txtIngresos);
 		add(txtIngresos);
 		add(botonContinuar);
-
+		add(calendar);
 	}
 
 	public JLabel getLabNombre() {
@@ -187,13 +184,7 @@ public class FrameHombre extends JFrame {
 		this.txtIngresos = txtIngresos;
 	}
 
-	public JTextField getTxtFecha() {
-		return txtFecha;
-	}
 
-	public void setTxtFecha(JTextField txtFecha) {
-		this.txtFecha = txtFecha;
-	}
 
 	public JTextField getTxtEstatura() {
 		return txtEstatura;

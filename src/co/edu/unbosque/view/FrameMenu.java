@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.MatteBorder;
 
@@ -65,6 +66,9 @@ public class FrameMenu extends JFrame {
 		 this.add(panel);
 
 	}
+	public void mostrarMensaje(String pMen) {
+		JOptionPane.showMessageDialog(null, pMen);
+	}
 	
 
 	public FrameGenero getFrg() {
@@ -82,6 +86,11 @@ public class FrameMenu extends JFrame {
 		}else if(opcion.equals("Mujer")) {
 			abrirFrameMujer();
 		}
+	}
+
+
+	public FrameMujer getFrmuj() {
+		return frmuj;
 	}
 
 
