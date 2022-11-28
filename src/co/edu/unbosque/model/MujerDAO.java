@@ -11,8 +11,6 @@ public class MujerDAO {
 	}
 	
 	public void añadirMujeres() {
-		MujerDTO mujer = new MujerDTO(null, null, 0, 0, 0, false);
-		mujeres.add(mujer);
-		System.out.println(mujer.apellido);
+		
 	}
 }

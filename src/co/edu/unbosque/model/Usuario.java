@@ -6,7 +6,7 @@ public abstract class Usuario {
 	protected int edad;
 	protected double estatura;
 	protected int nlikes;
-	
+	protected String alias;
 	
 	
 }
