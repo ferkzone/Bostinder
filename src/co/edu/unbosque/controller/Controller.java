@@ -19,7 +19,6 @@ public class Controller implements ActionListener {
 	}
 
 	public void iniciar() {
-		bos.getMujer().añadirMujeres();
 		fm = new FrameMenu(this,bos.getHandler());
 	}
 
