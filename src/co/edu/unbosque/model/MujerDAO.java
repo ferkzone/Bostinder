@@ -10,14 +10,9 @@ public class MujerDAO {
 		mujeres = new ArrayList<MujerDTO>();
 	}
 	
-<<<<<<< HEAD
-	public void A�adirMujeres() {
-		MujerDTO mujer = new MujerDTO(null, null, 0, 0, 0, false);
-		mujeres.add(mujer);
-		System.out.println(mujer.apellido);
-=======
-	public void añadirMujeres() {
+	public void añadirMujeres(String pNom, String pApe, int pEdad, double pEst, int pLikes,boolean pDiv, String pAli) {
 		
->>>>>>> branch 'master' of https://github.com/ferkzone/Bostinder
+		MujerDTO mujer = new MujerDTO(pNom, pApe, pEdad, pEst, pLikes, pDiv, pAli);
+		mujeres.add(mujer);
 	}
 }
