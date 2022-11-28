@@ -19,10 +19,7 @@ public class Controller implements ActionListener {
 	}
 
 	public void iniciar() {
-<<<<<<< HEAD
-		bos.getMujer().AñadirMujeres();
-=======
->>>>>>> branch 'master' of https://github.com/ferkzone/Bostinder
+		
 		fm = new FrameMenu(this,bos.getHandler());
 	}
 

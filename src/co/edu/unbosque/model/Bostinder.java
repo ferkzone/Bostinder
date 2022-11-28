@@ -5,6 +5,8 @@ import co.edu.unbosque.model.persistence.FileHandler;
 public class Bostinder {
 	private FileHandler handler;
 	private MujerDAO mujer;
+	
+	
 	public Bostinder() {
 		handler = new FileHandler();
 		mujer = new MujerDAO();
