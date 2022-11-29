@@ -13,6 +13,7 @@ import java.util.Scanner;
 
 public class FileHandler {
 
+	
 	private static File file;
 	private static Scanner reader;
 	private static PrintWriter writer;
