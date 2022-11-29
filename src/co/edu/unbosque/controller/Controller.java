@@ -43,7 +43,7 @@ public class Controller implements ActionListener {
 			fm.getFrtut().setVisible(false);
 			fm.setVisible(true);
 		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameMujer.botonContinuar"))) {
-			
+			System.out.println("a");
 			String nombre = fm.getFrmuj().getTxtNombre().getText();
 			String usuario = fm.getFrmuj().getTxtUser().getText();
 			String nacimiento = fm.getFrmuj().getCalendar().getDateFormatString();
