@@ -7,7 +7,6 @@ public abstract class Usuario {
 	protected int nlikes;
 	protected String alias;
 	protected String correo;
-<<<<<<< HEAD
 	public String getNombre() {
 		return nombre;
 	}
@@ -46,8 +45,6 @@ public abstract class Usuario {
 	}
 	
 	
-=======
->>>>>>> branch 'master' of https://github.com/ferkzone/Bostinder
-	
+
 	
 }

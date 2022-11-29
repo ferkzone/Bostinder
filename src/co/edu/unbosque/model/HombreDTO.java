@@ -12,11 +12,9 @@ public class HombreDTO extends Usuario implements Serializable{
 		super.estatura = pEst;
 		super.nlikes = pLikes;
 		super.alias = pAli;
-<<<<<<< HEAD
 		super.correo = pCor;
-=======
+
 		
->>>>>>> branch 'master' of https://github.com/ferkzone/Bostinder
 		this.salario = salario;
 	}
 
