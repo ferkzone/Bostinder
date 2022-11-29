@@ -12,6 +12,7 @@ public class HombreDTO extends Usuario implements Serializable{
 		super.estatura = pEst;
 		super.nlikes = pLikes;
 		super.alias = pAli;
+		
 		this.salario = salario;
 	}
 
