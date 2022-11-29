@@ -11,7 +11,7 @@ public class MujerDAO {
 	}
 	
 	public void añadirMujeres(String pNom, String pApe, int pEdad, double pEst, int pLikes,boolean pDiv, String pAli) throws DatosIncompletosException {			
-		if(pNom == "" | pApe == "" | pAli == "") {
+		if(pNom == "" || pAli == "") {
 			throw new DatosIncompletosException();
 		}
 		MujerDTO mujer = new MujerDTO(pNom, pEdad, pEst, pLikes, pDiv, pAli);
