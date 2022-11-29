@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import co.edu.unbosque.model.Bostinder;
 import co.edu.unbosque.model.DatosIncompletosException;
+import co.edu.unbosque.model.SonidoDAO;
 import co.edu.unbosque.model.persistence.FileHandler;
 import co.edu.unbosque.view.FrameConfiguracion;
 import co.edu.unbosque.view.FrameMenu;
@@ -13,8 +14,10 @@ import co.edu.unbosque.view.FrameRegistro;
 public class Controller implements ActionListener {
 	private FrameMenu fm;
 	private Bostinder bos;
+	private SonidoDAO sound;
 	
 	public Controller() {
+		sound = new SonidoDAO();
 		bos = new Bostinder();
 		iniciar();
 	}
@@ -26,6 +29,7 @@ public class Controller implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		sound.click();
 		if(e.getActionCommand().equals(fm.getBotonInicioS().getActionCommand())) {
 			fm.abrirFrameRegistro();			
 		}else if(e.getActionCommand().equals(fm.getBotonConfi().getActionCommand())) {

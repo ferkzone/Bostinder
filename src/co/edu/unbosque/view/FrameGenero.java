@@ -17,7 +17,6 @@ public class FrameGenero extends JFrame {
 	private JLabel txtLabel;
 	private String[] opcionGenero;
 	private JComboBox generoLista;
-	
 	private JButton boton;
 	
 	public FrameGenero(ActionListener listener, FileHandler handler) {
