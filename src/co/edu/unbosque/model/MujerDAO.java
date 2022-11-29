@@ -14,7 +14,7 @@ public class MujerDAO {
 		if(pNom == "" | pApe == "" | pAli == "") {
 			throw new DatosIncompletosException();
 		}
-		MujerDTO mujer = new MujerDTO(pNom, pApe, pEdad, pEst, pLikes, pDiv, pAli);
+		MujerDTO mujer = new MujerDTO(pNom, pEdad, pEst, pLikes, pDiv, pAli);
 		mujeres.add(mujer);
 	}
 

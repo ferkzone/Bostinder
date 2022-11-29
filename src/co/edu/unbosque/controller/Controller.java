@@ -56,7 +56,23 @@ public class Controller implements ActionListener {
 			String correo = fm.getFrmuj().getTxtCorreo().getText();
 			try {
 				double estatura = Double.parseDouble(fm.getFrmuj().getTxtEstatura().getText());
-				bos.getMujer().añadirMujeres(nombre, "", 0, estatura, 0, divorcios, correo);
+				bos.getMujer().añadirMujeres(nombre, usuario, 0, estatura, 0, divorcios, correo);
+			} catch (DatosIncompletosException e1) {
+				// TODO Auto-generated catch block
+				fm.mostrarMensaje("No puede haber un dato en blanco!");
+			}catch(NumberFormatException en) {
+				fm.mostrarMensaje("Escribe un nÃºmero en estatura!");
+			}
+		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameHombre.botonContinuar"))) {
+			System.out.println("a");
+			String nombre = fm.getFrhom().getTxtNombre().getText();
+			String usuario = fm.getFrhom().getTxtUser().getText();
+			String nacimiento = fm.getFrhom().getCalendar().getDateFormatString();
+			String correo = fm.getFrhom().getTxtCorreo().getText();
+			int ingresos = Integer.parseInt(fm.getFrhom().getTxtIngresos().getText());
+			try {
+				double estatura = Double.parseDouble(fm.getFrmuj().getTxtEstatura().getText());
+				bos.getHombre().añadirHombres(nombre, 0, estatura, 0, correo, ingresos, usuario);
 			} catch (DatosIncompletosException e1) {
 				// TODO Auto-generated catch block
 				fm.mostrarMensaje("No puede haber un dato en blanco!");
