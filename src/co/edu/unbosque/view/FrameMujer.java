@@ -214,6 +214,14 @@ public class FrameMujer extends JFrame {
 
 	
 
+	public JDateChooser getCalendar() {
+		return calendar;
+	}
+
+	public void setCalendar(JDateChooser calendar) {
+		this.calendar = calendar;
+	}
+
 	public JTextField getTxtEstatura() {
 		return txtEstatura;
 	}

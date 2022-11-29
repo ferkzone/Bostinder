@@ -206,5 +206,13 @@ public class FrameHombre extends JFrame {
 		return serialVersionUID;
 	}
 
+	public JDateChooser getCalendar() {
+		return calendar;
+	}
+
+	public void setCalendar(JDateChooser calendar) {
+		this.calendar = calendar;
+	}
+
 
 }

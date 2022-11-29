@@ -46,6 +46,7 @@ public class Controller implements ActionListener {
 			
 			String nombre = fm.getFrmuj().getTxtNombre().getText();
 			String usuario = fm.getFrmuj().getTxtUser().getText();
+			String nacimiento = fm.getFrmuj().getCalendar().getDateFormatString();
 			boolean divorcios = true;
 			if(fm.getFrmuj().getSi().isSelected()) {
 				 divorcios = true;
