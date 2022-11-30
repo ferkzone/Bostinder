@@ -108,11 +108,10 @@ public class FrameHombre extends JFrame {
 	}
 
 	
-	public int obtenerAños() {
+	public int obtenerAñosH(String fecha) {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		LocalDate fechaNac = LocalDate.parse("15/08/1993", fmt);
+		LocalDate fechaNac = LocalDate.parse(fecha, fmt);
 		LocalDate ahora = LocalDate.now();
-
 		Period periodo = Period.between(fechaNac, ahora);
 		return periodo.getYears();
 	}

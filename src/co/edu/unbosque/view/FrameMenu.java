@@ -3,6 +3,9 @@ package co.edu.unbosque.view;
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -66,6 +69,14 @@ public class FrameMenu extends JFrame {
 		 this.add(panel);
 
 	}
+	public int obtenerAñosM(String fecha) {
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate fechaNac = LocalDate.parse(fecha, fmt);
+		LocalDate ahora = LocalDate.now();
+		Period periodo = Period.between(fechaNac, ahora);
+		return periodo.getYears();
+	}
+	
 	public void mostrarMensaje(String pMen) {
 		JOptionPane.showMessageDialog(null, pMen);
 	}
