@@ -6,12 +6,13 @@ public class MujerDTO extends Usuario implements Serializable{
 	private boolean divorcios;
 	
 	
-	public MujerDTO(String pNom, int pEdad, double pEst, int pLikes,boolean pDiv, String pAli) {
+	public MujerDTO(String pNom, String pCor, int pEdad, double pEst, int pLikes,boolean pDiv, String pAli) {
 		super.nombre = pNom;
 		super.edad = pEdad;
 		super.estatura = pEst;
 		super.nlikes = pLikes;
 		super.alias = pAli;
+		super.correo = pCor;
 		this.divorcios = pDiv;
 	}
 

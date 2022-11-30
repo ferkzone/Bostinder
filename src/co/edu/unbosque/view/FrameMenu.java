@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.MatteBorder;
 
+import co.edu.unbosque.model.EdadInvalidaException;
 import co.edu.unbosque.model.persistence.FileHandler;
 
 public class FrameMenu extends JFrame {
@@ -69,12 +70,17 @@ public class FrameMenu extends JFrame {
 		 this.add(panel);
 
 	}
-	public int obtenerAñosM(String fecha) {
-		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	public int obtenerAños(String fecha) throws EdadInvalidaException {
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 		LocalDate fechaNac = LocalDate.parse(fecha, fmt);
 		LocalDate ahora = LocalDate.now();
 		Period periodo = Period.between(fechaNac, ahora);
-		return periodo.getYears();
+		int años = periodo.getYears();
+		if(años < 18) {
+			throw new EdadInvalidaException();
+		}else {
+			return años;
+		}	
 	}
 	
 	public void mostrarMensaje(String pMen) {

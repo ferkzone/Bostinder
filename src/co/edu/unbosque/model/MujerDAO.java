@@ -10,12 +10,28 @@ public class MujerDAO {
 		mujeres = new ArrayList<MujerDTO>();
 	}
 
-	public void anadirMujeres(String pNom, String pApe, int pEdad, double pEst, int pLikes,boolean pDiv, String pAli) throws DatosIncompletosException {			
-		if(pNom == "" | pApe == "" | pAli == "") {
-			throw new DatosIncompletosException();
-		}
-		MujerDTO mujer = new MujerDTO(pNom, pEdad, pEst, pLikes, pDiv, pAli);
+	public void anadirMujeres(String pNom,String pCor,int pEdad, double pEst, int pLikes,boolean pDiv, String pAli) {			
+		MujerDTO mujer = new MujerDTO(pNom,pCor,pEdad, pEst, pLikes, pDiv, pAli);
 		mujeres.add(mujer);
+	}
+	public String listarMujeres() {
+		int i;
+		String texto = "";
+		String divorciada = "";
+		for(i=0;i<mujeres.size();i++) {
+			if(mujeres.get(i).isDivorcios()==true) {
+				 divorciada = "Si";
+			}else {
+				divorciada = "No";
+			}
+			texto+= 	   "Nombre: " + mujeres.get(i).getNombre() +" "+ 
+						   "Username: " + mujeres.get(i).getAlias() + " "+
+						   "Edad: " + mujeres.get(i).getEdad()+" "+
+						   "Estatura: " + mujeres.get(i).getEstatura()+" "+
+						   "Número de likes: " + mujeres.get(i).getNlikes()+" "+
+						   "¿Divorciada?: " + divorciada + "\n" ;   
+		}
+		return texto;
 	}
 
 	public ArrayList<MujerDTO> getMujeres() {

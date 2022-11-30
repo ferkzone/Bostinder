@@ -17,6 +17,7 @@ import javax.swing.border.MatteBorder;
 
 import com.toedter.calendar.JDateChooser;
 
+import co.edu.unbosque.model.EdadInvalidaException;
 import co.edu.unbosque.model.persistence.FileHandler;
 
 public class FrameHombre extends JFrame {
@@ -110,13 +111,7 @@ public class FrameHombre extends JFrame {
 	}
 
 	
-	public int obtenerEdadH(String fecha) {
-		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		LocalDate fechaNac = LocalDate.parse(fecha, fmt);
-		LocalDate ahora = LocalDate.now();
-		Period periodo = Period.between(fechaNac, ahora);
-		return periodo.getYears();
-	}
+	
 	
 	
 	public JLabel getLabNombre() {

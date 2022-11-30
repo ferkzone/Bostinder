@@ -9,11 +9,11 @@ public class HombreDAO {
 		hombres = new ArrayList<HombreDTO>();
 	}
 
-	public void anadirHombres(String pNom,String pCor, int pEdad, double pEst, int pLikes,int pSal, String pAli) throws DatosIncompletosException {	
-		if(pNom == null || pAli == null) {
-			throw new DatosIncompletosException();
-		}
+	public void anadirHombres(String pNom,String pCor, int pEdad, double pEst, int pLikes,int pSal, String pAli) {	
+		
 		HombreDTO hombre = new HombreDTO(pNom, pEdad, pEst, pLikes, pCor, pSal, pAli);
 		hombres.add(hombre);
 	}
+	
+	
 }

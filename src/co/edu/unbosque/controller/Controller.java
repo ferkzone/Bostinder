@@ -3,11 +3,13 @@ package co.edu.unbosque.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 import co.edu.unbosque.model.Bostinder;
 import co.edu.unbosque.model.DatosIncompletosException;
+import co.edu.unbosque.model.EdadInvalidaException;
 import co.edu.unbosque.model.SonidoDAO;
 import co.edu.unbosque.model.persistence.FileHandler;
 import co.edu.unbosque.view.FrameConfiguracion;
@@ -50,10 +52,9 @@ public class Controller implements ActionListener {
 			fm.getFrtut().setVisible(false);
 			fm.setVisible(true);
 		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameMujer.botonContinuar"))) {
-			System.out.println("a");
 			String nombre = fm.getFrmuj().getTxtNombre().getText();
 			String usuario = fm.getFrmuj().getTxtUser().getText();
-			String nacimiento = fm.getFrmuj().getCalendar().getDateFormatString();
+			
 			boolean divorcios = true;
 			if(fm.getFrmuj().getSi().isSelected()) {
 				 divorcios = true;
@@ -62,42 +63,42 @@ public class Controller implements ActionListener {
 			}
 			String correo = fm.getFrmuj().getTxtCorreo().getText();
 			try {
+				SimpleDateFormat dcn = new SimpleDateFormat("dd-MM-yyyy");
+				String fecha1 = dcn.format(fm.getFrmuj().getCalendar().getDate()); 
+				int edad = fm.obtenerAños(fecha1);
 				double estatura = Double.parseDouble(fm.getFrmuj().getTxtEstatura().getText());
-				bos.getMujer().anadirMujeres(nombre, usuario, 0, estatura, 0, divorcios, correo);
-			} catch (DatosIncompletosException e1) {
-				// TODO Auto-generated catch block
-				fm.mostrarMensaje("No puede haber un dato en blanco!");
+				bos.getMujer().anadirMujeres(nombre, correo, edad, estatura, 0, divorcios, usuario);
 			}catch(NumberFormatException en) {
 				fm.mostrarMensaje("Escribe un numero en estatura!");
-			}
+			}catch(EdadInvalidaException ei) {
+				fm.mostrarMensaje("No puedes registrarte si eres menor de edad!");
+			}catch(NullPointerException fe) {
+				fm.mostrarMensaje("Selecciona una fecha!");
+			}System.out.println(bos.getMujer().listarMujeres());
 		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameHombre.botonContinuar"))) {
 			System.out.println("a");
 			String nombre = fm.getFrhom().getTxtNombre().getText();
 			String usuario = fm.getFrhom().getTxtUser().getText();
 			String correo = fm.getFrhom().getTxtCorreo().getText();
-			
 			try {
-				Date fecha = fm.getFrhom().getCalendar().getDate();
-				String fecha1 = DateFormat.getDateInstance().format(fecha);
-				int edad = fm.getFrhom().obtenerEdadH(fecha1);
-				double estatura = Double.parseDouble(fm.getFrmuj().getTxtEstatura().getText());
+				SimpleDateFormat dcn = new SimpleDateFormat("dd-MM-yyyy");
+				String fecha1 = dcn.format(fm.getFrhom().getCalendar().getDate()); 
+				int edad = fm.obtenerAños(fecha1);
+				double estatura = Double.parseDouble(fm.getFrhom().getTxtEstatura().getText());
 				int ingresos = Integer.parseInt(fm.getFrhom().getTxtIngresos().getText());
 				bos.getHombre().anadirHombres(nombre, correo, edad, estatura, 0, ingresos, usuario);
-			} catch (DatosIncompletosException e1) {
-				// TODO Auto-generated catch block
-				fm.mostrarMensaje("No puede haber un dato en blanco!");
 			}catch(NumberFormatException en) {
 				fm.mostrarMensaje("Escribe un numero en el campo correspondiente!");
 			}catch(NullPointerException fe) {
 				fm.mostrarMensaje("Selecciona una fecha!");
+			}catch(EdadInvalidaException ei) {
+				fm.mostrarMensaje("No puedes registrarte si eres menor de edad!");
 			}
+			
 		}
 			
 	}
 	
 	
-	
-	
-	
-	
+		
 }
