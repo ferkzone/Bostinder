@@ -29,7 +29,7 @@ public class MujerDAO {
 						   "Edad: " + mujeres.get(i).getEdad()+" "+
 						   "Estatura: " + mujeres.get(i).getEstatura()+" "+
 						   "Número de likes: " + mujeres.get(i).getNlikes()+" "+
-						   "¿Divorciada?: " + divorciada + "\n" ;   
+						   "¿Divorciada?: " + divorciada + "\n";   
 		}
 		return texto;
 	}
