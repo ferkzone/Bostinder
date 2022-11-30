@@ -9,15 +9,11 @@ public class HombreDAO {
 		hombres = new ArrayList<HombreDTO>();
 	}
 
-<<<<<<< HEAD
-	public void aadirHombres(String pNom, String pApe, int pEdad, double pEst, int pLikes,int pSal, String pAli) throws DatosIncompletosException {	
-=======
-	public void añadirHombres(String pNom, String pApe,String pCor, int pEdad, double pEst, int pLikes,int pSal, String pAli) throws DatosIncompletosException {	
->>>>>>> branch 'master' of https://github.com/ferkzone/Bostinder
-		if(pNom == null || pApe==null||pAli == null) {
+	public void anadirHombres(String pNom,String pCor, int pEdad, double pEst, int pLikes,int pSal, String pAli) throws DatosIncompletosException {	
+		if(pNom == null || pAli == null) {
 			throw new DatosIncompletosException();
 		}
-		HombreDTO hombre = new HombreDTO(pNom, pEdad, pEst, pLikes, pAli, pSal, pAli);
+		HombreDTO hombre = new HombreDTO(pNom, pEdad, pEst, pLikes, pCor, pSal, pAli);
 		hombres.add(hombre);
 	}
 }

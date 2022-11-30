@@ -4,6 +4,9 @@ import java.awt.Color;
 
 
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -104,6 +107,15 @@ public class FrameHombre extends JFrame {
 		add(calendar);
 	}
 
+	
+	public int obtenerAños() {
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate fechaNac = LocalDate.parse("15/08/1993", fmt);
+		LocalDate ahora = LocalDate.now();
+
+		Period periodo = Period.between(fechaNac, ahora);
+		return periodo.getYears();
+	}
 	public JLabel getLabNombre() {
 		return labNombre;
 	}

@@ -10,7 +10,7 @@ public class MujerDAO {
 		mujeres = new ArrayList<MujerDTO>();
 	}
 
-	public void añadirMujeres(String pNom, String pApe, int pEdad, double pEst, int pLikes,boolean pDiv, String pAli) throws DatosIncompletosException {			
+	public void anadirMujeres(String pNom, String pApe, int pEdad, double pEst, int pLikes,boolean pDiv, String pAli) throws DatosIncompletosException {			
 		if(pNom == "" | pApe == "" | pAli == "") {
 			throw new DatosIncompletosException();
 		}

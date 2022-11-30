@@ -71,20 +71,11 @@ public class Controller implements ActionListener {
 			System.out.println("a");
 			String nombre = fm.getFrhom().getTxtNombre().getText();
 			String usuario = fm.getFrhom().getTxtUser().getText();
-			String nacimiento = fm.getFrhom().getCalendar().getDateFormatString();
 			String correo = fm.getFrhom().getTxtCorreo().getText();
 			int ingresos = Integer.parseInt(fm.getFrhom().getTxtIngresos().getText());
 			try {
 				double estatura = Double.parseDouble(fm.getFrmuj().getTxtEstatura().getText());
-<<<<<<< HEAD
-				bos.getHombre().aadirHombres(nombre, "", 0, estatura, 0, correo, ingresos, usuario);
-
-				bos.getMujer().anadirMujeres(nombre, "", 0, estatura, 0, null, correo);
-
-=======
-				bos.getHombre().anadirHombres(nombre, 0, estatura, 0, correo, ingresos, usuario);
-				bos.getMujer().anadirMujeres(nombre, "", 0, estatura, 0, divorcios, correo);
->>>>>>> branch 'master' of https://github.com/ferkzone/Bostinder
+				bos.getHombre().anadirHombres(nombre, correo, 0, estatura, 0, ingresos, usuario);
 			} catch (DatosIncompletosException e1) {
 				// TODO Auto-generated catch block
 				fm.mostrarMensaje("No puede haber un dato en blanco!");
