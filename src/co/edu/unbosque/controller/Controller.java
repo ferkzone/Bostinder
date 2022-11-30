@@ -65,7 +65,7 @@ public class Controller implements ActionListener {
 				// TODO Auto-generated catch block
 				fm.mostrarMensaje("No puede haber un dato en blanco!");
 			}catch(NumberFormatException en) {
-				fm.mostrarMensaje("Escribe un número en estatura!");
+				fm.mostrarMensaje("Escribe un numero en estatura!");
 			}
 		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameHombre.botonContinuar"))) {
 			System.out.println("a");
@@ -76,7 +76,7 @@ public class Controller implements ActionListener {
 			int ingresos = Integer.parseInt(fm.getFrhom().getTxtIngresos().getText());
 			try {
 				double estatura = Double.parseDouble(fm.getFrmuj().getTxtEstatura().getText());
-				bos.getHombre().aadirHombres(nombre, 0, estatura, 0, correo, ingresos, usuario);
+				bos.getHombre().aadirHombres(nombre, "", 0, estatura, 0, correo, ingresos, usuario);
 
 				bos.getMujer().anadirMujeres(nombre, "", 0, estatura, 0, null, correo);
 
@@ -84,7 +84,7 @@ public class Controller implements ActionListener {
 				// TODO Auto-generated catch block
 				fm.mostrarMensaje("No puede haber un dato en blanco!");
 			}catch(NumberFormatException en) {
-				fm.mostrarMensaje("Escribe un número en estatura!");
+				fm.mostrarMensaje("Escribe un numero en estatura!");
 			}
 		}
 			
