@@ -9,7 +9,7 @@ public class HombreDAO {
 		hombres = new ArrayList<HombreDTO>();
 	}
 
-	public void añadirHombres(String pNom, String pApe, int pEdad, double pEst, int pLikes,int pSal, String pAli) throws DatosIncompletosException {	
+	public void añadirHombres(String pNom, String pApe,String pCor, int pEdad, double pEst, int pLikes,int pSal, String pAli) throws DatosIncompletosException {	
 		if(pNom == null || pApe==null||pAli == null) {
 			throw new DatosIncompletosException();
 		}
