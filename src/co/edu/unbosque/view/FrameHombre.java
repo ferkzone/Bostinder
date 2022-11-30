@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -65,6 +66,7 @@ public class FrameHombre extends JFrame {
 		txtUser.setBounds(280, 40, 150, 25);
 		
 		calendar.setBounds(280, 70, 150, 25);
+		calendar.setDateFormatString("dd/MM/yyyy");
 		
 		txtCorreo = new JTextField("");
 		txtCorreo.setForeground(Color.BLACK);
@@ -108,13 +110,15 @@ public class FrameHombre extends JFrame {
 	}
 
 	
-	public int obtenerAñosH(String fecha) {
+	public int obtenerEdadH(String fecha) {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDate fechaNac = LocalDate.parse(fecha, fmt);
 		LocalDate ahora = LocalDate.now();
 		Period periodo = Period.between(fechaNac, ahora);
 		return periodo.getYears();
 	}
+	
+	
 	public JLabel getLabNombre() {
 		return labNombre;
 	}
