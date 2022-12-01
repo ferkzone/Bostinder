@@ -22,26 +22,25 @@ public class Controller implements ActionListener {
 	private SonidoDAO sound;
 	
 	public Controller() {
-		sound = new SonidoDAO();
+	
 		bos = new Bostinder();
 		iniciar();
 	}
 
 	public void iniciar() {
-		
 		fm = new FrameMenu(this,bos.getHandler());
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		sound.click();
+		bos.getSound().click();
 		if(e.getActionCommand().equals(fm.getBotonInicioS().getActionCommand())) {
 			fm.abrirFrameRegistro();			
 		}else if(e.getActionCommand().equals(fm.getBotonConfi().getActionCommand())) {
 			fm.abrirFrameConfig();
 		}else if (e.getActionCommand().equals(fm.getBotonComoFun().getActionCommand())) {
 			fm.abrirFrameTut();
-		}else if (e.getActionCommand().equals(fm.getBotonRegis().getActionCommand())) {
+		}else if (e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameMenu.botonRegis"))) {
 			fm.abrirFrameGen();
 		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameGenero.boton"))) {
 			fm.abrirFramesGeneros();

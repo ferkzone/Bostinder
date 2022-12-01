@@ -12,8 +12,6 @@ public class SonidoDAO {
 		}
 		
 		public void click() {
-			sound.reproducir("/Bostinder/src/co/edu/unbosque/util/sounds/juan.wav");
-		}
-	
-	
+			sound.reproducir("src/co/edu/unbosque/util/sounds/click.wav");
+		}	
 }

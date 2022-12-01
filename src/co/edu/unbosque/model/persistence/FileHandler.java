@@ -41,7 +41,7 @@ public class FileHandler {
 			System.out.println(e.getMessage());
 		}
 	}
-
+		
 	public static Object loadSerializable(String url) {
 		Object tmp = null;
 		try {
@@ -119,6 +119,8 @@ public class FileHandler {
 			}
 		}
 	}
+	
+	
 	
 	public static Properties getProperties() {
 		return prop;

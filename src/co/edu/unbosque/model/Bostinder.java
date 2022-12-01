@@ -6,8 +6,12 @@ public class Bostinder {
 	private FileHandler handler;
 	private MujerDAO mujer;
 	private HombreDAO hombre;
+	private SonidoDAO sound;
 	
+	
+
 	public Bostinder() {
+		sound = new SonidoDAO();
 		handler = new FileHandler();
 		mujer = new MujerDAO();
 		hombre = new HombreDAO();
@@ -35,6 +39,13 @@ public class Bostinder {
 
 	public void setHombre(HombreDAO hombre) {
 		this.hombre = hombre;
+	}
+	public SonidoDAO getSound() {
+		return sound;
+	}
+
+	public void setSound(SonidoDAO sound) {
+		this.sound = sound;
 	}
 	
 }

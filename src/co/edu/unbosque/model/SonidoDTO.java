@@ -21,6 +21,7 @@ public class SonidoDTO {
 			sound.open(AudioSystem.getAudioInputStream(new File(url)));
 			sound.start();
 		} catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
+			e.printStackTrace();
 		}
 
 	}
