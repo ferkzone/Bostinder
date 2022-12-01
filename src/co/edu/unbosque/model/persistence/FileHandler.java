@@ -1,6 +1,8 @@
 package co.edu.unbosque.model.persistence;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -10,6 +12,8 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.Properties;
 import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 public class FileHandler {
 
@@ -22,6 +26,9 @@ public class FileHandler {
 	private static ObjectInputStream ois;
 	private static FileOutputStream fos;
 	private static ObjectOutputStream oos;
+	private static BufferedReader lector;
+	private static String linea;
+	private static String partes[] = null;
 	
 	
 	public static void writeSerializable(Object o, String url) {
@@ -120,7 +127,23 @@ public class FileHandler {
 		}
 	}
 	
-	
+	public static void leerArchivo(String nombreArchivo){
+		try {
+			lector = new BufferedReader(new FileReader(nombreArchivo));
+			while ((linea = lector.readLine()) != null) {
+				partes = linea.split("");
+				imprimirLinea();
+				System.out.println();
+			}
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+	}
+	public static void imprimirLinea(){
+		for (int i = 0; i < partes.length; i++) {
+			System.out.println(partes[i]+"   |   ");
+		}
+	}
 	
 	public static Properties getProperties() {
 		return prop;
