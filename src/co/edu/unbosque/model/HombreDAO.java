@@ -14,6 +14,33 @@ public class HombreDAO {
 		HombreDTO hombre = new HombreDTO(pNom, pEdad, pEst, pLikes, pCor, pSal, pAli);
 		hombres.add(hombre);
 	}
+	public String listarMujeres() {
+		int i;
+		String texto = "";
+		String divorciada = "";
+		for(i=0;i<hombres.size();i++) {
+			texto+= 	   "Nombre: " + hombres.get(i).getNombre() +" "+ 
+						   "Username: " + hombres.get(i).getAlias() + " "+
+						   "Edad: " + hombres.get(i).getEdad()+" "+
+						   "Estatura: " + hombres.get(i).getEstatura()+" "+
+						   "Número de likes: " + hombres.get(i).getNlikes()+" "+
+						   "Ingresos mensuales: " + hombres.get(i).getSalario();
+		}
+		return texto;
+	}
+	public void ordenarMujeres() {
+		int i,j;
+		HombreDTO aux;
+		for(i=0;i<hombres.size()-1;i++) {
+			for(j=i+1;j<hombres.size();j++) {
+				if(hombres.get(i).getNlikes()<hombres.get(j).getNlikes()) {
+					aux = hombres.get(j);
+					hombres.set(j, hombres.get(i));
+					hombres.set(i, aux);
+				}
+			}
+		}
+	}	
 	
 	
 }

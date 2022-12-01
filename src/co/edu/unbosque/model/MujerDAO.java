@@ -33,6 +33,20 @@ public class MujerDAO {
 		}
 		return texto;
 	}
+	public void ordenarMujeres() {
+		int i,j;
+		MujerDTO aux;
+		for(i=0;i<mujeres.size()-1;i++) {
+			for(j=i+1;j<mujeres.size();j++) {
+				if(mujeres.get(i).getNlikes()<mujeres.get(j).getNlikes()) {
+					aux = mujeres.get(j);
+					mujeres.set(j, mujeres.get(i));
+					mujeres.set(i, aux);
+				}
+			}
+		}
+	}
+	
 
 	public ArrayList<MujerDTO> getMujeres() {
 		return mujeres;
