@@ -2,7 +2,6 @@ package co.edu.unbosque.view;
 
 import java.awt.Color;
 
-
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.time.Period;
@@ -21,25 +20,17 @@ import co.edu.unbosque.model.EdadInvalidaException;
 import co.edu.unbosque.model.persistence.FileHandler;
 
 public class FrameHombre extends JFrame {
-	
+
 	private static final long serialVersionUID = 1L;
-	private JLabel labNombre;
-	private JLabel labUser;
-	private JLabel labFecha;
-	private JLabel labEstatura;
-	private JLabel labIngresos;
-	private JLabel labCorreo;
-	private JTextField txtCorreo;
-	private JTextField txtNombre;
-	private JTextField txtUser;
-	private JTextField txtIngresos;
+	private JLabel labNombre, labUser, labFecha, labEstatura, labIngresos, labCorreo;
+	private JTextField txtCorreo, txtNombre, txtUser, txtIngresos;
 	private JDateChooser calendar;
 	private JTextField txtEstatura;
-	private JButton botonContinuar;
-	
+	private JButton botonContinuar, botonVolver;
+
 	public FrameHombre(ActionListener listener, FileHandler handler) {
 		setLayout(null);
-		setSize(480,300);
+		setSize(480, 300);
 		FileHandler.loadProperties(1);
 		setLocationRelativeTo(null);
 		calendar = new JDateChooser();
@@ -55,41 +46,47 @@ public class FrameHombre extends JFrame {
 		labEstatura.setBounds(1, 130, 150, 25);
 		labIngresos = new JLabel("       Ingresos Mensuales");
 		labIngresos.setBounds(1, 160, 150, 25);
-		
+
 		txtNombre = new JTextField("");
 		txtNombre.setForeground(Color.BLACK);
 		txtNombre.setBackground(Color.WHITE);
 		txtNombre.setBounds(280, 10, 150, 25);
-		
+
 		txtUser = new JTextField("");
 		txtUser.setForeground(Color.BLACK);
 		txtUser.setBackground(Color.WHITE);
 		txtUser.setBounds(280, 40, 150, 25);
-		
+
 		calendar.setBounds(280, 70, 150, 25);
 		calendar.setDateFormatString("dd/MM/yyyy");
-		
+
 		txtCorreo = new JTextField("");
 		txtCorreo.setForeground(Color.BLACK);
 		txtCorreo.setBackground(Color.WHITE);
 		txtCorreo.setBounds(280, 100, 150, 25);
-		
+
 		txtIngresos = new JTextField("");
 		txtIngresos.setForeground(Color.BLACK);
 		txtIngresos.setBackground(Color.WHITE);
 		txtIngresos.setBounds(280, 160, 150, 25);
-		
+
 		txtEstatura = new JTextField("");
 		txtEstatura.setForeground(Color.BLACK);
 		txtEstatura.setBackground(Color.WHITE);
 		txtEstatura.setBounds(280, 130, 150, 25);
-		
-		botonContinuar= new JButton(handler.getProperties().getProperty("persistence.FrameHombre.botonContinuar"));
+
+		botonContinuar = new JButton(handler.getProperties().getProperty("persistence.FrameHombre.botonContinuar"));
 		botonContinuar.setBorder(new MatteBorder(1, 1, 1, 1, Color.BLACK));
 		botonContinuar.setBackground(Color.WHITE);
-		botonContinuar.setBounds(180, 200, 100, 30);
+		botonContinuar.setBounds(300, 200, 100, 30);
 		botonContinuar.addActionListener(listener);
-		
+
+		botonVolver = new JButton(handler.getProperties().getProperty("persistence.FrameHombre.botonVolver"));
+		botonVolver.setBorder(new MatteBorder(1, 1, 1, 1, Color.BLACK));
+		botonVolver.setBackground(Color.WHITE);
+		botonVolver.setBounds(100, 200, 100, 30);
+		botonVolver.addActionListener(listener);
+
 		add(labNombre);
 		add(txtNombre);
 		add(txtNombre);
@@ -108,18 +105,23 @@ public class FrameHombre extends JFrame {
 		add(txtIngresos);
 		add(botonContinuar);
 		add(calendar);
+		add(botonVolver);
 	}
 
-	
-	
-	
-	
 	public JLabel getLabNombre() {
 		return labNombre;
 	}
 
 	public void setLabNombre(JLabel labNombre) {
 		this.labNombre = labNombre;
+	}
+
+	public JButton getBotonVolver() {
+		return botonVolver;
+	}
+
+	public void setBotonVolver(JButton botonVolver) {
+		this.botonVolver = botonVolver;
 	}
 
 	public JLabel getLabUser() {
@@ -194,8 +196,6 @@ public class FrameHombre extends JFrame {
 		this.txtIngresos = txtIngresos;
 	}
 
-
-
 	public JTextField getTxtEstatura() {
 		return txtEstatura;
 	}
@@ -223,6 +223,5 @@ public class FrameHombre extends JFrame {
 	public void setCalendar(JDateChooser calendar) {
 		this.calendar = calendar;
 	}
-
 
 }

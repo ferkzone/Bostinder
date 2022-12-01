@@ -12,7 +12,7 @@ public class SonidoDAO {
 		}
 		
 		public void click() {
-			sound.reproducir("src/co/edu/unbosque/util/soundS/click.wav");
+			sound.reproducir("/Bostinder/src/co/edu/unbosque/util/sounds/juan.wav");
 		}
 	
 	

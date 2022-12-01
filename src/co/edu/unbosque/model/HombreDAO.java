@@ -14,10 +14,9 @@ public class HombreDAO {
 		HombreDTO hombre = new HombreDTO(pNom, pEdad, pEst, pLikes, pCor, pSal, pAli);
 		hombres.add(hombre);
 	}
-	public String listarMujeres() {
+	public String listarHombres() {
 		int i;
 		String texto = "";
-		String divorciada = "";
 		for(i=0;i<hombres.size();i++) {
 			texto+= 	   "Nombre: " + hombres.get(i).getNombre() +" "+ 
 						   "Username: " + hombres.get(i).getAlias() + " "+
@@ -28,7 +27,7 @@ public class HombreDAO {
 		}
 		return texto;
 	}
-	public void ordenarMujeres() {
+	public void ordenarHombres() {
 		int i,j;
 		HombreDTO aux;
 		for(i=0;i<hombres.size()-1;i++) {

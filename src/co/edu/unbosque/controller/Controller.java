@@ -45,22 +45,31 @@ public class Controller implements ActionListener {
 			fm.abrirFrameGen();
 		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameGenero.boton"))) {
 			fm.abrirFramesGeneros();
+		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameGenero.boton1"))) {
+			fm.setVisible(true);
+			fm.getFrg().setVisible(false);
 		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameRegistro.vol"))){
 			fm.getFrreg().setVisible(false);
 			fm.setVisible(true);
+		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameHombre.botonVolver"))){
+			fm.getFrg().setVisible(true);
+			fm.getFrhom().setVisible(false);
 		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameTutorial.atras"))){
 			fm.getFrtut().setVisible(false);
 			fm.setVisible(true);
+		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persitence.FrameConfiguracion.listo"))){
+			fm.getFrconfig().setVisible(false);
+			fm.setVisible(true);
 		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameMujer.botonContinuar"))) {
 			String nombre = fm.getFrmuj().getTxtNombre().getText();
-			String usuario = fm.getFrmuj().getTxtUser().getText();
-			
+			String usuario = fm.getFrmuj().getTxtUser().getText();			
 			boolean divorcios = true;
 			if(fm.getFrmuj().getSi().isSelected()) {
 				 divorcios = true;
 			}else if(fm.getFrmuj().getNo().isSelected()) {
 				 divorcios = false;
 			}
+			
 			String correo = fm.getFrmuj().getTxtCorreo().getText();
 			try {
 				SimpleDateFormat dcn = new SimpleDateFormat("dd-MM-yyyy");
@@ -78,7 +87,7 @@ public class Controller implements ActionListener {
 		}else if(e.getActionCommand().equals(bos.getHandler().getProperties().getProperty("persistence.FrameHombre.botonContinuar"))) {
 			System.out.println("a");
 			String nombre = fm.getFrhom().getTxtNombre().getText();
-			String usuario = fm.getFrhom().getTxtUser().getText();
+			String usuario = fm.getFrhom().getTxtUser().getText(); 
 			String correo = fm.getFrhom().getTxtCorreo().getText();
 			try {
 				SimpleDateFormat dcn = new SimpleDateFormat("dd-MM-yyyy");
