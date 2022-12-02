@@ -24,8 +24,8 @@ public class Controller implements ActionListener {
 	public Controller() {
 	
 		bos = new Bostinder();
-		bos.getUsuarios().leerArchivoH();
 		iniciar();
+		
 	}
 
 	public void iniciar() {
@@ -73,10 +73,10 @@ public class Controller implements ActionListener {
 			String correo = fm.getFrmuj().getTxtCorreo().getText();
 			try {
 				SimpleDateFormat dcn = new SimpleDateFormat("dd-MM-yyyy");
-				String fecha1 = dcn.format(fm.getFrmuj().getCalendar().getDate()); 
-				int edad = fm.obtenerAños(fecha1);
+				String fecha = dcn.format(fm.getFrmuj().getCalendar().getDate()); 
+				int edad = fm.obtenerDatos(fecha);
 				double estatura = Double.parseDouble(fm.getFrmuj().getTxtEstatura().getText());
-				bos.getMujer().anadirMujeres(nombre, correo, edad, estatura, 0, divorcios, usuario);
+				bos.getMujer().anadirMujeres(nombre, "", "", 0, edad, estatura, 0, divorcios,correo, fecha, usuario);
 			}catch(NumberFormatException en) {
 				fm.mostrarMensaje("Escribe un numero en estatura!");
 			}catch(EdadInvalidaException ei) {
@@ -91,11 +91,11 @@ public class Controller implements ActionListener {
 			String correo = fm.getFrhom().getTxtCorreo().getText();
 			try {
 				SimpleDateFormat dcn = new SimpleDateFormat("dd-MM-yyyy");
-				String fecha1 = dcn.format(fm.getFrhom().getCalendar().getDate()); 
-				int edad = fm.obtenerAños(fecha1);
+				String fecha = dcn.format(fm.getFrhom().getCalendar().getDate()); 
+				int edad = fm.obtenerDatos(fecha);
 				double estatura = Double.parseDouble(fm.getFrhom().getTxtEstatura().getText());
-				double ingresos = Double.parseDouble(fm.getFrhom().getTxtIngresos().getText());
-				bos.getHombre().anadirHombres(nombre, correo, edad, estatura, 0, ingresos, usuario);
+				int ingresos = Integer.parseInt(fm.getFrhom().getTxtIngresos().getText());
+				bos.getHombre().anadirHombres(nombre,"","",0, edad, estatura, 0,correo, ingresos,fecha, usuario);
 			}catch(NumberFormatException en) {
 				fm.mostrarMensaje("Escribe un numero en el campo correspondiente!");
 			}catch(NullPointerException fe) {
@@ -107,7 +107,5 @@ public class Controller implements ActionListener {
 		}
 			
 	}
-	
-	
 		
 }

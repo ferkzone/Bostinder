@@ -9,9 +9,8 @@ public class HombreDAO {
 		hombres = new ArrayList<HombreDTO>();
 	}
 
-	public void anadirHombres(String pNom,String pCor, int pEdad, double pEst, int pLikes,double pSal, String pAli) {	
-		
-		HombreDTO hombre = new HombreDTO(pNom, pEdad, pEst, pLikes, pCor, pSal, pAli);
+	public void anadirHombres(String pNom, String pApel, String genero, int pCon, int pEdad, double pEst, int pLikes, String pCor, int pSal, String pNac, String pAli) {	
+		HombreDTO hombre = new HombreDTO(pNom, pApel, genero, pCon, pEdad, pEst, pLikes, pCor, pSal, pNac, pAli);
 		hombres.add(hombre);
 	}
 	public String listarHombres() {
@@ -19,10 +18,15 @@ public class HombreDAO {
 		String texto = "";
 		for(i=0;i<hombres.size();i++) {
 			texto+= 	   "Nombre: " + hombres.get(i).getNombre() +" "+ 
+						   "Apellidos: " + hombres.get(i).getApellido() +" "+ 
+						   "Genero: " + hombres.get(i).getGenero() +" "+ 
 						   "Username: " + hombres.get(i).getAlias() + " "+
+						   "Correo: " + hombres.get(i).getCorreo() + " "+
+						   "Contraseña: " + hombres.get(i).getContraseña()+ " "+
 						   "Edad: " + hombres.get(i).getEdad()+" "+
 						   "Estatura: " + hombres.get(i).getEstatura()+" "+
-						   "Número de likes: " + hombres.get(i).getNlikes()+" "+
+						   "Numero de likes: " + hombres.get(i).getNlikes()+" "+
+						   "Divorcios: " + hombres.get(i).getDivorcio() +" "+ 
 						   "Ingresos mensuales: " + hombres.get(i).getSalario();
 		}
 		return texto;
@@ -41,8 +45,14 @@ public class HombreDAO {
 		}
 	}
 
+	
+
 	public ArrayList<HombreDTO> getHombres() {
 		return hombres;
+	}
+
+	public void setHombres(ArrayList<HombreDTO> hombres) {
+		this.hombres = hombres;
 	}	
 	
 	

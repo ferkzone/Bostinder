@@ -10,8 +10,9 @@ public class MujerDAO {
 		mujeres = new ArrayList<MujerDTO>();
 	}
 
-	public void anadirMujeres(String pNom,String pCor,int pEdad, double pEst, int pLikes,boolean pDiv, String pAli) {			
-		MujerDTO mujer = new MujerDTO(pNom,pCor,pEdad, pEst, pLikes, pDiv, pAli);
+	public void anadirMujeres(String pNom, String pApel1,String pApel2, String genero, int pCon, int pEdad, double pEst, int pLikes,boolean pDiv, String pCor, String pNac,  String pAli) {			
+		MujerDTO mujer = new MujerDTO(pNom, 
+				pApel1,pApel2,genero, pCon, pEdad, pEst, pLikes,pDiv,pCor,pNac,pAli);
 		mujeres.add(mujer);
 	}
 	public String listarMujeres() {
@@ -25,10 +26,14 @@ public class MujerDAO {
 				divorciada = "No";
 			}
 			texto+= 	   "Nombre: " + mujeres.get(i).getNombre() +" "+ 
+					       "Apellidos: " + mujeres.get(i).getApellido() +" "+ 
+						   "Genero: " + mujeres.get(i).getGenero() +" "+ 
 						   "Username: " + mujeres.get(i).getAlias() + " "+
+						   "Correo: " + mujeres.get(i).getCorreo() + " "+
+						   "Contraseña: " + mujeres.get(i).getContraseña()+ " "+
 						   "Edad: " + mujeres.get(i).getEdad()+" "+
 						   "Estatura: " + mujeres.get(i).getEstatura()+" "+
-						   "Número de likes: " + mujeres.get(i).getNlikes()+" "+
+						   "NÃºmero de likes: " + mujeres.get(i).getNlikes()+" "+
 						   "¿Divorciada?: " + divorciada + "\n";   
 		}
 		return texto;
