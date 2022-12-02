@@ -1,12 +1,16 @@
 package co.edu.unbosque.model;
 
+import java.util.ArrayList;
+
 import co.edu.unbosque.model.persistence.FileHandler;
+import co.edu.unbosque.model.persistence.UsuariosFile;
 
 public class Bostinder {
 	private FileHandler handler;
 	private MujerDAO mujer;
 	private HombreDAO hombre;
 	private SonidoDAO sound;
+	private UsuariosFile usuarios;
 	
 	
 
@@ -15,8 +19,21 @@ public class Bostinder {
 		handler = new FileHandler();
 		mujer = new MujerDAO();
 		hombre = new HombreDAO();
+		usuarios = new UsuariosFile();
 	}
-
+	
+	
+	public void cargarMujeres() {
+		
+	}
+	
+	public void cargarHombres() {
+		ArrayList<String> datos = new ArrayList<String>();
+		usuarios.leerArchivoH();
+		for(int i=0;i<usuarios.getDatos().length;i++) {
+		}
+		
+	}
 	public MujerDAO getMujer() {
 		return mujer;
 	}

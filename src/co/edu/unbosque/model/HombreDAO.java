@@ -9,7 +9,7 @@ public class HombreDAO {
 		hombres = new ArrayList<HombreDTO>();
 	}
 
-	public void anadirHombres(String pNom,String pCor, int pEdad, double pEst, int pLikes,int pSal, String pAli) {	
+	public void anadirHombres(String pNom,String pCor, int pEdad, double pEst, int pLikes,double pSal, String pAli) {	
 		
 		HombreDTO hombre = new HombreDTO(pNom, pEdad, pEst, pLikes, pCor, pSal, pAli);
 		hombres.add(hombre);

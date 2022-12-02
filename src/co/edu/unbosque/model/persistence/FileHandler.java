@@ -27,8 +27,8 @@ public class FileHandler {
 	private static FileOutputStream fos;
 	private static ObjectOutputStream oos;
 	private static BufferedReader lector;
-	private static String linea;
-	private static String partes[] = null;
+
+	private static String[] partes = null;
 	
 	
 	public static void writeSerializable(Object o, String url) {
@@ -127,26 +127,17 @@ public class FileHandler {
 		}
 	}
 	
-	public static void leerArchivo(String nombreArchivo){
-		try {
-			lector = new BufferedReader(new FileReader(nombreArchivo));
-			while ((linea = lector.readLine()) != null) {
-				partes = linea.split("");
-				imprimirLinea();
-				System.out.println();
-			}
-		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, e);
-		}
-	}
-	public static void imprimirLinea(){
-		for (int i = 0; i < partes.length; i++) {
-			System.out.println(partes[i]+"   |   ");
-		}
-	}
+	
 	
 	public static Properties getProperties() {
 		return prop;
+	}
+	public static String[] getPartes() {
+		return partes;
+	}
+
+	public static void setPartes(String[] partes) {
+		FileHandler.partes = partes;
 	}
 	
 }

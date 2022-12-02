@@ -24,6 +24,7 @@ public class Controller implements ActionListener {
 	public Controller() {
 	
 		bos = new Bostinder();
+		bos.getHandler().leerArchivo();
 		iniciar();
 	}
 
@@ -93,7 +94,7 @@ public class Controller implements ActionListener {
 				String fecha1 = dcn.format(fm.getFrhom().getCalendar().getDate()); 
 				int edad = fm.obtenerAños(fecha1);
 				double estatura = Double.parseDouble(fm.getFrhom().getTxtEstatura().getText());
-				int ingresos = Integer.parseInt(fm.getFrhom().getTxtIngresos().getText());
+				double ingresos = Double.parseDouble(fm.getFrhom().getTxtIngresos().getText());
 				bos.getHombre().anadirHombres(nombre, correo, edad, estatura, 0, ingresos, usuario);
 			}catch(NumberFormatException en) {
 				fm.mostrarMensaje("Escribe un numero en el campo correspondiente!");
