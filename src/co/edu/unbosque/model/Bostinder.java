@@ -23,17 +23,47 @@ public class Bostinder {
 	}
 	
 	
-	public void cargarMujeres() {
-		
+	public void cargarHombres() {
+		usuarios.leerArchivoH();
+		String[] data = usuarios.getDatos();
+		for(int i=0;i<usuarios.getDatos().length;i++) {
+			HombreDTO hombreaux = new HombreDTO(data[i*2],
+					data[i*3],
+					data[i*4],
+					data[i*5],
+					data[i*6],
+					data[i*7],
+					data[i*8],
+					data[i*9]);
+			hombre.getHombres().add(hombreaux);
+		}
 	}
 	
-	public void cargarHombres() {
-		ArrayList<String> datos = new ArrayList<String>();
-		usuarios.leerArchivoH();
+	public void cargarMujeres() {
+		usuarios.leerArchivoM();
+		String[] data = usuarios.getDatos();
 		for(int i=0;i<usuarios.getDatos().length;i++) {
-		}
-		
+			MujerDTO mujeraux = new MujerDTO(data[i*2],
+					data[i*3],
+					data[i*4],
+					data[i*5],
+					data[i*6],
+					data[i*7],
+					data[i*8],
+					data[i*9]);
+			mujer.getMujeres().add(mujeraux);
+		}		
 	}
+	public UsuariosFile getUsuarios() {
+		return usuarios;
+	}
+
+
+	public void setUsuarios(UsuariosFile usuarios) {
+		this.usuarios = usuarios;
+	}
+
+
 	public MujerDAO getMujer() {
 		return mujer;
 	}

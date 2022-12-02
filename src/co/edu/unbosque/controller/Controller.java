@@ -24,7 +24,7 @@ public class Controller implements ActionListener {
 	public Controller() {
 	
 		bos = new Bostinder();
-		bos.getHandler().leerArchivo();
+		bos.getUsuarios().leerArchivoH();
 		iniciar();
 	}
 

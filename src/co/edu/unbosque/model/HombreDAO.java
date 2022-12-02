@@ -39,6 +39,10 @@ public class HombreDAO {
 				}
 			}
 		}
+	}
+
+	public ArrayList<HombreDTO> getHombres() {
+		return hombres;
 	}	
 	
 	
