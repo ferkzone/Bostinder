@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -16,32 +17,35 @@ public class UsuariosFile {
 
 	private static String linea;
 	private static BufferedReader lector;
-	private static String datos[];
 	
-	
-
 	public UsuariosFile() {
+		
 	}
 
 	public static void leerArchivoH(){
 		try {
 			lector = new BufferedReader(new FileReader("src/co/edu/unbosque/model/persistence/TablaHombres.csv"));
-			while ((linea = lector.readLine()) != null ) {
+			while ((linea = lector.readLine()) != null ) {				
 				 String datos[] = linea.split(";");
 				 linea = lector.readLine();
 				 System.out.println(Arrays.toString(datos));
-			}
-
+			}			
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e);
-		}
-		
+		} finally {
+			try {
+				lector.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}	
 	}
 	public static void leerArchivoM(){
 		try {
 			lector = new BufferedReader(new FileReader("src/co/edu/unbosque/model/persistence/TablaMujeres.csv"));
 			while ((linea = lector.readLine()) != null ) {
-				 String datos[] = linea.split(";");
+				 String datos[] = linea.split(";");				 
 			}
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e);

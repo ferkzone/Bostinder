@@ -33,17 +33,34 @@ public class HombreDAO {
 		return texto;
 	}
 	public void ordenarHombres() {
-		int i,j;
-		HombreDTO aux;
-		for(i=0;i<hombres.size()-1;i++) {
-			for(j=i+1;j<hombres.size();j++) {
-				if(hombres.get(i).getNlikes()<hombres.get(j).getNlikes()) {
-					aux = hombres.get(j);
-					hombres.set(j, hombres.get(i));
-					hombres.set(i, aux);
-				}
-			}
-		}
+		boolean swapped = true;
+		 int start = 0;
+	        int end = hombres.size();
+	        while (swapped == true) {	       
+	            swapped = false;	       
+	            for (int i = start; i < end - 1; ++i) {
+	                if (hombres.get(i).getNlikes() > hombres.get(i + 1).getNlikes()) {
+	                    HombreDTO temp = hombres.get(i);
+	                    hombres.set(i, hombres.get(i+1));
+	                    hombres.set(i+1, temp);
+	                    swapped = true;
+	                }
+	            }
+	            if (swapped == false) {
+	                break;
+	            }
+	            swapped = false;
+	            end = end - 1;
+	            for (int i = end - 1; i >= start; i--) {
+	                if (hombres.get(i).getNlikes() > hombres.get(i+1).getNlikes()) {
+	                    HombreDTO temp = hombres.get(i);
+	                    hombres.set(i, hombres.get(i+1));
+	                    hombres.set(i+1, temp);
+	                    swapped = true;
+	                }
+	            }
+	            start = start + 1;
+	        }
 	}
 
 	
