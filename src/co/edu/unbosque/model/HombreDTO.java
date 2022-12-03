@@ -3,9 +3,9 @@ package co.edu.unbosque.model;
 import java.io.Serializable;
 
 public class HombreDTO extends Usuario implements Serializable{
-	private int salario;
+	private double salario;
 
-	public HombreDTO(String pNom, String pApel1,String pApel2, String genero, String pCon, int pEdad,double pEst, int pLikes, String pCor, int pSal, String pNac, String pAli) {
+	public HombreDTO(String pNom, String pApel1,String pApel2, String genero, String pCon, int pEdad,double pEst, int pLikes, String pCor, double pSal, String pNac, String pAli) {
 		super.nombre = pNom;
 		super.apellido1 = pApel1;
 		super.apellido2 = pApel2;
@@ -23,11 +23,12 @@ public class HombreDTO extends Usuario implements Serializable{
 	public String toCSV() {
 		return this.nombre+","+this.edad+this.estatura+this.correo;
 	}
-	
-	public int getSalario() {
+	public double getSalario() {
 		return salario;
 	}
-	public void setSalario(int salario) {
+	public void setSalario(double salario) {
 		this.salario = salario;
 	}
+	
+	
 }

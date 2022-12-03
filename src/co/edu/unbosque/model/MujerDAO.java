@@ -10,7 +10,7 @@ public class MujerDAO {
 		mujeres = new ArrayList<MujerDTO>();
 	}
 
-	public void anadirMujeres(String pNom, String pApel1,String pApel2, String genero, int pCon, int pEdad, double pEst, int pLikes,boolean pDiv, String pCor, String pNac,  String pAli) {			
+	public void anadirMujeres(String pNom, String pApel1,String pApel2, String genero,String pCon, int pEdad, double pEst, int pLikes,boolean pDiv, String pCor, String pNac,  String pAli) {			
 		MujerDTO mujer = new MujerDTO(pNom, 
 				pApel1,pApel2,genero, pCon, pEdad, pEst, pLikes,pDiv,pCor,pNac,pAli);
 		mujeres.add(mujer);
@@ -26,7 +26,8 @@ public class MujerDAO {
 				divorciada = "No";
 			}
 			texto+= 	   "Nombre: " + mujeres.get(i).getNombre() +" "+ 
-					       "Apellidos: " + mujeres.get(i).getApellido() +" "+ 
+					       "Primer apellido: " + mujeres.get(i).getApellido1() +" "+ 
+					       "Segundo apellido: " + mujeres.get(i).getApellido2() + " "+
 						   "Genero: " + mujeres.get(i).getGenero() +" "+ 
 						   "Username: " + mujeres.get(i).getAlias() + " "+
 						   "Correo: " + mujeres.get(i).getCorreo() + " "+

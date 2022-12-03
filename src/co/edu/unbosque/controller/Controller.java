@@ -19,11 +19,11 @@ import co.edu.unbosque.view.FrameRegistro;
 public class Controller implements ActionListener {
 	private FrameMenu fm;
 	private Bostinder bos;
-	private SonidoDAO sound;
 	
 	public Controller() {
 	
 		bos = new Bostinder();
+		bos.cargarMujeres();
 		iniciar();
 		
 	}
@@ -74,9 +74,9 @@ public class Controller implements ActionListener {
 			try {
 				SimpleDateFormat dcn = new SimpleDateFormat("dd-MM-yyyy");
 				String fecha = dcn.format(fm.getFrmuj().getCalendar().getDate()); 
-				int edad = fm.obtenerDatos(fecha);
+				int edad = fm.obtenerAños(fecha);
 				double estatura = Double.parseDouble(fm.getFrmuj().getTxtEstatura().getText());
-				bos.getMujer().anadirMujeres(nombre, "", "", 0, edad, estatura, 0, divorcios,correo, fecha, usuario);
+				//bos.getMujer().anadirMujeres(nombre, "", "", 0, edad, estatura, 0, divorcios,correo, fecha, usuario);
 			}catch(NumberFormatException en) {
 				fm.mostrarMensaje("Escribe un numero en estatura!");
 			}catch(EdadInvalidaException ei) {
@@ -92,10 +92,10 @@ public class Controller implements ActionListener {
 			try {
 				SimpleDateFormat dcn = new SimpleDateFormat("dd-MM-yyyy");
 				String fecha = dcn.format(fm.getFrhom().getCalendar().getDate()); 
-				int edad = fm.obtenerDatos(fecha);
+				int edad = fm.obtenerAños(fecha);
 				double estatura = Double.parseDouble(fm.getFrhom().getTxtEstatura().getText());
 				int ingresos = Integer.parseInt(fm.getFrhom().getTxtIngresos().getText());
-				bos.getHombre().anadirHombres(nombre,"","",0, edad, estatura, 0,correo, ingresos,fecha, usuario);
+				//bos.getHombre().anadirHombres(nombre,"","",0, edad, estatura, 0,correo, ingresos,fecha, usuario);
 			}catch(NumberFormatException en) {
 				fm.mostrarMensaje("Escribe un numero en el campo correspondiente!");
 			}catch(NullPointerException fe) {

@@ -9,8 +9,8 @@ public class HombreDAO {
 		hombres = new ArrayList<HombreDTO>();
 	}
 
-	public void anadirHombres(String pNom, String pApel, String genero, int pCon, int pEdad, double pEst, int pLikes, String pCor, int pSal, String pNac, String pAli) {	
-		HombreDTO hombre = new HombreDTO(pNom, pApel, genero, pCon, pEdad, pEst, pLikes, pCor, pSal, pNac, pAli);
+	public void anadirHombres(String pNom, String pApel1,String pApel2, String genero, String pCon, int pEdad, double pEst, int pLikes, String pCor, double pSal, String pNac, String pAli) {	
+		HombreDTO hombre = new HombreDTO(pNom, pApel1,pApel2, genero, pCon, pEdad, pEst, pLikes, pCor, pSal, pNac, pAli);
 		hombres.add(hombre);
 	}
 	public String listarHombres() {
@@ -18,8 +18,9 @@ public class HombreDAO {
 		String texto = "";
 		for(i=0;i<hombres.size();i++) {
 			texto+= 	   "Nombre: " + hombres.get(i).getNombre() +" "+ 
-						   "Apellidos: " + hombres.get(i).getApellido() +" "+ 
-						   "Genero: " + hombres.get(i).getGenero() +" "+ 
+						   "Primer apellido: " + hombres.get(i).getApellido1() +" "+ 
+						   "Segundo apellido: " + hombres.get(i).getApellido2() + " "+
+ 						   "Genero: " + hombres.get(i).getGenero() +" "+ 
 						   "Username: " + hombres.get(i).getAlias() + " "+
 						   "Correo: " + hombres.get(i).getCorreo() + " "+
 						   "Contraseña: " + hombres.get(i).getContraseña()+ " "+

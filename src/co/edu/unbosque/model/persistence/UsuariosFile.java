@@ -17,7 +17,9 @@ public class UsuariosFile {
 	private BufferedReader lector;
 	private String[] datos;
 	
-	
+	public UsuariosFile() {
+		datos = new String[500];
+	}
 
 	public void leerArchivoH(){
 		try {
@@ -35,7 +37,6 @@ public class UsuariosFile {
 			lector = new BufferedReader(new FileReader("src/co/edu/unbosque/model/persistence/TablaMujeres.csv"));
 			while ((linea = lector.readLine()) != null ) {
 				datos = linea.split(";");
-				imprimirLinea();
 			}
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e);
@@ -44,7 +45,7 @@ public class UsuariosFile {
 	public void writeCSV(ArrayList<HombreDTO> a) {
 		File f = new File("src/co/edu/unbosque/model/persistence/datos.csv");
 		try(FileWriter fw = new FileWriter(f)){
-			fw.write(a.get(a.size()-1).getNombre()+";"+a.get(a.size()-1).getApellido()+";"+a.get(a.size()-1).getGenero()
+			fw.write(a.get(a.size()-1).getNombre()+";"+a.get(a.size()-1).getApellido1()+";"+a.get(a.size()-1).getApellido2()+";"+a.get(a.size()-1).getGenero()
 					+a.get(a.size()-1).getAlias()+a.get(a.size()-1).getContraseña()+a.get(a.size()-1).getCorreo()
 					+a.get(a.size()-1).getNacimiento()+a.get(a.size()-1).getDivorcio()+a.get(a.size()-1).getNlikes())
 					;
@@ -55,7 +56,7 @@ public class UsuariosFile {
 	public void writeCSVM(ArrayList<MujerDTO> a) {
 		File f = new File("src/co/edu/unbosque/model/persistence/datos.csv");
 		try(FileWriter fw = new FileWriter(f)){
-			fw.write(a.get(a.size()-1).getNombre()+";"+a.get(a.size()-1).getApellido()+";"+a.get(a.size()-1).getGenero()
+			fw.write(a.get(a.size()-1).getNombre()+";"+a.get(a.size()-1).getApellido1()+";"+a.get(a.size()-1).getApellido2()+";"+a.get(a.size()-1).getGenero()
 					+a.get(a.size()-1).getAlias()+a.get(a.size()-1).getContraseña()+a.get(a.size()-1).getCorreo()
 					+a.get(a.size()-1).getNacimiento()+a.get(a.size()-1).getDivorcio()+a.get(a.size()-1).getNlikes())
 					;
