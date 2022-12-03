@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import javax.swing.JOptionPane;
 
@@ -13,30 +14,34 @@ import co.edu.unbosque.model.MujerDTO;
 
 public class UsuariosFile {
 
-	private String linea;
-	private BufferedReader lector;
-	private String[] datos;
+	private static String linea;
+	private static BufferedReader lector;
+	private static String datos[];
 	
+	
+
 	public UsuariosFile() {
-		datos = new String[500];
 	}
 
-	public void leerArchivoH(){
+	public static void leerArchivoH(){
 		try {
 			lector = new BufferedReader(new FileReader("src/co/edu/unbosque/model/persistence/TablaHombres.csv"));
 			while ((linea = lector.readLine()) != null ) {
-				datos = linea.split(";");
-				imprimirLinea();
+				 String datos[] = linea.split(";");
+				 linea = lector.readLine();
+				 System.out.println(Arrays.toString(datos));
 			}
+
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e);
 		}
+		
 	}
-	public void leerArchivoM(){
+	public static void leerArchivoM(){
 		try {
 			lector = new BufferedReader(new FileReader("src/co/edu/unbosque/model/persistence/TablaMujeres.csv"));
 			while ((linea = lector.readLine()) != null ) {
-				datos = linea.split(";");
+				 String datos[] = linea.split(";");
 			}
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e);
@@ -65,20 +70,11 @@ public class UsuariosFile {
 	}
 }
 	
-
-
-	public void imprimirLinea(){
-		for (int i = 0; i < datos.length; i++) {
-			System.out.println(datos[i]);
-		}
-	}
 	public String getLinea() {
 		return linea;
 	}
 	public BufferedReader getLector() {
 		return lector;
 	}
-	public String[] getDatos() {
-		return datos;
-	}
+	
 }

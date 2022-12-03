@@ -27,8 +27,8 @@ public class Bostinder {
 	
 	public void cargarHombres() {
 		usuarios.leerArchivoH();
-		datah = usuarios.getDatos();
-		for(int i=1;i<usuarios.getDatos().length;i++) {
+		//datah = usuarios.getDatos();
+		for(int i=1;i<50;i++) {
 			hombre.anadirHombres(datah[i*1], 
 					datah[i*2], 
 					datah[i*3],
@@ -48,8 +48,8 @@ public class Bostinder {
 	public void cargarMujeres() {
 		usuarios.leerArchivoM();
 		boolean divorcio = false;
-		datam = usuarios.getDatos();
-		for(int i=1;i<usuarios.getDatos().length;i++) {
+		//datam = usuarios.getDatos();
+		for(int i=1;i<10;i++) {
 			if(datam[i*9].equals("SI")) {
 				divorcio = true;
 			}
@@ -65,7 +65,7 @@ public class Bostinder {
 					datam[i*7], 
 					datam[i*8], 
 					datam[i*6]);
-		}		
+		}
 		System.out.println(mujer.listarMujeres());
 	}
 	public UsuariosFile getUsuarios() {

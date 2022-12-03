@@ -12,6 +12,7 @@ import co.edu.unbosque.model.DatosIncompletosException;
 import co.edu.unbosque.model.EdadInvalidaException;
 import co.edu.unbosque.model.SonidoDAO;
 import co.edu.unbosque.model.persistence.FileHandler;
+import co.edu.unbosque.model.persistence.UsuariosFile;
 import co.edu.unbosque.view.FrameConfiguracion;
 import co.edu.unbosque.view.FrameMenu;
 import co.edu.unbosque.view.FrameRegistro;
@@ -23,7 +24,7 @@ public class Controller implements ActionListener {
 	public Controller() {
 	
 		bos = new Bostinder();
-		bos.cargarMujeres();
+		UsuariosFile.leerArchivoH();
 		iniciar();
 		
 	}
