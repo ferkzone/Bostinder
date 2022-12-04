@@ -36,11 +36,11 @@ public class FrameMujer extends JFrame {
 
 
 	
-	public FrameMujer(ActionListener listener, FileHandler handler) {
+	public FrameMujer(ActionListener listener) {
 
 		setLayout(null);
 		setSize(480,300);
-		handler.loadProperties(1);
+		FileHandler.loadProperties(1);
 		setLocationRelativeTo(null);
 		calendar = new JDateChooser();
 		labNombre = new JLabel("       Nombre");
@@ -91,7 +91,7 @@ public class FrameMujer extends JFrame {
 		txtEstatura.setBounds(280, 100, 150, 25);
 
 		
-		botonContinuar= new JButton(handler.getProperties().getProperty("persistence.FrameMujer.botonContinuar"));
+		botonContinuar= new JButton(FileHandler.getProperties().getProperty("persistence.FrameMujer.botonContinuar"));
 		botonContinuar.setBorder(new MatteBorder(1, 1, 1, 1, Color.BLACK));
 		botonContinuar.setBackground(Color.WHITE);
 		botonContinuar.setBounds(180, 200, 100, 30);

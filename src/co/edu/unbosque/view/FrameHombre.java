@@ -28,7 +28,7 @@ public class FrameHombre extends JFrame {
 	private JTextField txtEstatura;
 	private JButton botonContinuar, botonVolver;
 
-	public FrameHombre(ActionListener listener, FileHandler handler) {
+	public FrameHombre(ActionListener listener) {
 		setLayout(null);
 		setSize(480, 300);
 		FileHandler.loadProperties(1);
@@ -75,13 +75,13 @@ public class FrameHombre extends JFrame {
 		txtEstatura.setBackground(Color.WHITE);
 		txtEstatura.setBounds(280, 130, 150, 25);
 
-		botonContinuar = new JButton(handler.getProperties().getProperty("persistence.FrameHombre.botonContinuar"));
+		botonContinuar = new JButton(FileHandler.getProperties().getProperty("persistence.FrameHombre.botonContinuar"));
 		botonContinuar.setBorder(new MatteBorder(1, 1, 1, 1, Color.BLACK));
 		botonContinuar.setBackground(Color.WHITE);
 		botonContinuar.setBounds(300, 200, 100, 30);
 		botonContinuar.addActionListener(listener);
 
-		botonVolver = new JButton(handler.getProperties().getProperty("persistence.FrameHombre.botonVolver"));
+		botonVolver = new JButton(FileHandler.getProperties().getProperty("persistence.FrameHombre.botonVolver"));
 		botonVolver.setBorder(new MatteBorder(1, 1, 1, 1, Color.BLACK));
 		botonVolver.setBackground(Color.WHITE);
 		botonVolver.setBounds(100, 200, 100, 30);

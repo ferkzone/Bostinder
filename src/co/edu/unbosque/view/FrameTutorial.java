@@ -20,12 +20,12 @@ public class FrameTutorial extends JFrame {
 	private JButton atras;
 	private JLabel img;
 
-	public FrameTutorial(ActionListener listener, FileHandler handler) {
+	public FrameTutorial(ActionListener listener) {
 		panel = new JPanel();
 		botones = new JPanel();
 		img = new JLabel();
-		handler.loadProperties(1);
-		atras = new JButton(handler.getProperties().getProperty("persistence.FrameTutorial.atras"));
+		FileHandler.loadProperties(1);
+		atras = new JButton(FileHandler.getProperties().getProperty("persistence.FrameTutorial.atras"));
 		botones.setLayout(new GridLayout(1, 1));
 		botones.add(atras);
 		atras.addActionListener(listener);

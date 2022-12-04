@@ -20,7 +20,7 @@ public class FrameBostinder extends JFrame{
 	private JButton cerrsesBut;
 	private JLabel perfilLabel;
 	
-	public FrameBostinder(ActionListener listener, FileHandler handler, String perfil) {
+	public FrameBostinder(ActionListener listener, String perfil) {
 		this.setLayout(null);
 		this.setSize(800,550);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -28,12 +28,12 @@ public class FrameBostinder extends JFrame{
 		this.setLocationRelativeTo(null);
 		this.setVisible(false);
 		this.setTitle("Bostinder");
-		handler.loadProperties(1);
-		likeBut = new JButton(handler.getProperties().getProperty("persistence.FrameBostinder.likeBut"));
-		dislikeBut = new JButton(handler.getProperties().getProperty("persistence.FrameBostinder.dislikeBut"));
-		perfadmBut = new JButton(handler.getProperties().getProperty("persistence.FrameBostinder.perfadmBut"));
-		topusersBut = new JButton(handler.getProperties().getProperty("persistence.FrameBostinder.topusersBut"));
-		cerrsesBut= new JButton(handler.getProperties().getProperty("persistence.FrameBostinder.cerrsesBut"));
+		FileHandler.loadProperties(1);
+		likeBut = new JButton(FileHandler.getProperties().getProperty("persistence.FrameBostinder.likeBut"));
+		dislikeBut = new JButton(FileHandler.getProperties().getProperty("persistence.FrameBostinder.dislikeBut"));
+		perfadmBut = new JButton(FileHandler.getProperties().getProperty("persistence.FrameBostinder.perfadmBut"));
+		topusersBut = new JButton(FileHandler.getProperties().getProperty("persistence.FrameBostinder.topusersBut"));
+		cerrsesBut= new JButton(FileHandler.getProperties().getProperty("persistence.FrameBostinder.cerrsesBut"));
 		perfilLabel = new JLabel(perfil);
 		likeBut.setBounds(110, 400, 120, 80);
 		dislikeBut.setBounds(290, 400, 120, 80);

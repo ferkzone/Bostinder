@@ -19,12 +19,12 @@ public class FrameGenero extends JFrame {
 	private JComboBox generoLista;
 	private JButton boton, boton1;
 
-	public FrameGenero(ActionListener listener, FileHandler handler) {
+	public FrameGenero(ActionListener listener) {
 		setLayout(null);
 		setResizable(false);
 		setSize(450, 200);
 		setLocationRelativeTo(null);
-		handler.loadProperties(1);
+		FileHandler.loadProperties(1);
 
 		txtLabel = new JLabel("      Selecciona tú genero: ");
 		txtLabel.setBounds(40, 50, 150, 25);
@@ -38,13 +38,13 @@ public class FrameGenero extends JFrame {
 		generoLista.setBackground(Color.WHITE);
 		generoLista.setBounds(200, 50, 150, 25);
 
-		boton = new JButton(handler.getProperties().getProperty("persistence.FrameGenero.boton"));
+		boton = new JButton(FileHandler.getProperties().getProperty("persistence.FrameGenero.boton"));
 		boton.setBorder(new MatteBorder(1, 1, 1, 1, Color.BLACK));
 		boton.setBackground(Color.WHITE);
 		boton.setBounds(250, 115, 100, 30);
 		boton.addActionListener(listener);
 
-		boton1 = new JButton(handler.getProperties().getProperty("persistence.FrameGenero.boton1"));
+		boton1 = new JButton(FileHandler.getProperties().getProperty("persistence.FrameGenero.boton1"));
 		boton1.setBorder(new MatteBorder(1, 1, 1, 1, Color.BLACK));
 		boton1.setBackground(Color.WHITE);
 		boton1.setBounds(100, 115, 100, 30);

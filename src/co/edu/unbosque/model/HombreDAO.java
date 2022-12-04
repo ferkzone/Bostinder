@@ -62,13 +62,9 @@ public class HombreDAO {
 	            start = start + 1;
 	        }
 	}
-
-	
-
 	public ArrayList<HombreDTO> getHombres() {
 		return hombres;
 	}
-
 	public void setHombres(ArrayList<HombreDTO> hombres) {
 		this.hombres = hombres;
 	}	

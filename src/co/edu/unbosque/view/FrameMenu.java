@@ -28,21 +28,21 @@ public class FrameMenu extends JFrame {
 	private FrameRegistro frreg;
 	private FrameTutorial frtut;
 
-	public FrameMenu(ActionListener listener, FileHandler handler) {
-		frhom = new FrameHombre(listener,handler);
-		frmuj = new FrameMujer(listener,handler);
-		frbos = new FrameBostinder(listener,handler,"");
-		frconfig = new FrameConfiguracion(listener,handler);
-		frreg = new FrameRegistro(listener,handler);
-		frtut = new FrameTutorial(listener,handler);
-		frg = new FrameGenero(listener,handler);
+	public FrameMenu(ActionListener listener) {
+		frhom = new FrameHombre(listener);
+		frmuj = new FrameMujer(listener);
+		frbos = new FrameBostinder(listener,"");
+		frconfig = new FrameConfiguracion(listener);
+		frreg = new FrameRegistro(listener);
+		frtut = new FrameTutorial(listener);
+		frg = new FrameGenero(listener);
 		
 		panel = new JPanel();
-		handler.loadProperties(1);
-		botonInicioS = new JButton(handler.getProperties().getProperty("persistence.FrameMenu.botonInicioS"));
-		botonRegis = new JButton(handler.getProperties().getProperty("persistence.FrameMenu.botonRegis"));
-		botonComoFun = new JButton(handler.getProperties().getProperty("persistence.FrameMenu.botonComoFun"));
-		 botonConfi = new JButton(handler.getProperties().getProperty("persistence.FrameMenu.botonConfi"));
+		FileHandler.loadProperties(1);
+		botonInicioS = new JButton(FileHandler.getProperties().getProperty("persistence.FrameMenu.botonInicioS"));
+		botonRegis = new JButton(FileHandler.getProperties().getProperty("persistence.FrameMenu.botonRegis"));
+		botonComoFun = new JButton(FileHandler.getProperties().getProperty("persistence.FrameMenu.botonComoFun"));
+		 botonConfi = new JButton(FileHandler.getProperties().getProperty("persistence.FrameMenu.botonConfi"));
 		 this.setSize(350,505);
 		 this.setResizable(false);
 		 this.setLocationRelativeTo(null);

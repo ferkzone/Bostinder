@@ -23,18 +23,18 @@ public class FrameConfiguracion extends JFrame {
 	private JComboBox<String> idioma;
 	private JButton listo;
 
-	public FrameConfiguracion(ActionListener listener, FileHandler handler) {
+	public FrameConfiguracion(ActionListener listener) {
 		panel = new JPanel();
 		combo = new JPanel();
 		temas = new JComboBox<String>();
 		idioma = new JComboBox<String>();
-		listo = new JButton(handler.getProperties().getProperty("persitence.FrameConfiguracion.listo"));
-		temas.setBorder(new TitledBorder(handler.getProperties().getProperty("persitence.FrameConfiguracion.them")));
-		idioma.setBorder(new TitledBorder(handler.getProperties().getProperty("persitence.FrameConfiguracion.leng")));
+		listo = new JButton(FileHandler.getProperties().getProperty("persitence.FrameConfiguracion.listo"));
+		temas.setBorder(new TitledBorder(FileHandler.getProperties().getProperty("persitence.FrameConfiguracion.them")));
+		idioma.setBorder(new TitledBorder(FileHandler.getProperties().getProperty("persitence.FrameConfiguracion.leng")));
 		temas.addItem("Oscuro");
 		temas.addItem("Claro");
-		idioma.addItem(handler.getProperties().getProperty("persitence.FrameConfiguracion.esp"));
-		idioma.addItem(handler.getProperties().getProperty("persitence.FrameConfiguracion.ing"));
+		idioma.addItem(FileHandler.getProperties().getProperty("persitence.FrameConfiguracion.esp"));
+		idioma.addItem(FileHandler.getProperties().getProperty("persitence.FrameConfiguracion.ing"));
 		combo.setLayout(new GridLayout(1, 2));
 		combo.add(temas);
 		combo.add(idioma);

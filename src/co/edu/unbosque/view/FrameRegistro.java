@@ -19,11 +19,11 @@ public class FrameRegistro extends JFrame {
 	private JButton volver, aceptar;
 	private JTextField j1, j2;
 
-	public FrameRegistro(ActionListener listener, FileHandler handler) {
+	public FrameRegistro(ActionListener listener) {
 		panel = new JPanel();
 		FileHandler.loadProperties(1);
-		volver = new JButton(handler.getProperties().getProperty("persistence.FrameRegistro.vol"));
-		aceptar = new JButton(handler.getProperties().getProperty("persistence.FrameRegistro.acep"));
+		volver = new JButton(FileHandler.getProperties().getProperty("persistence.FrameRegistro.vol"));
+		aceptar = new JButton(FileHandler.getProperties().getProperty("persistence.FrameRegistro.acep"));
 		volver.addActionListener(listener);
 		aceptar.addActionListener(listener);
 		j1 = new JTextField();
@@ -47,8 +47,8 @@ public class FrameRegistro extends JFrame {
 		txi2.setLayout(new BorderLayout());
 		txi1.add(j1, BorderLayout.CENTER);
 		txi2.add(j2, BorderLayout.CENTER);
-		j1.setBorder(new TitledBorder(handler.getProperties().getProperty("persistence.FrameRegistro.j1")));
-		j2.setBorder(new TitledBorder(handler.getProperties().getProperty("persistence.FrameRegistro.j2")));
+		j1.setBorder(new TitledBorder(FileHandler.getProperties().getProperty("persistence.FrameRegistro.j1")));
+		j2.setBorder(new TitledBorder(FileHandler.getProperties().getProperty("persistence.FrameRegistro.j2")));
 		txt.add(txi1);
 		txt.add(txi2);
 		panel.setLayout(new BorderLayout());

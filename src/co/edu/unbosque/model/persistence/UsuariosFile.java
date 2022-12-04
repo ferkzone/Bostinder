@@ -17,6 +17,7 @@ public class UsuariosFile {
 
 	private static String linea;
 	private static BufferedReader lector;
+	private static String datos[];
 	
 	public UsuariosFile() {
 		
