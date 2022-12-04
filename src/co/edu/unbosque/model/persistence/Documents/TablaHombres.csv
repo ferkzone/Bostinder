@@ -1,12 +1,13 @@
-﻿1;Rafael;De Pedro;Peña;H;depedro9;[je4Wg34BEv7qSh;depedro9@mail.com;3/02/1970;11;1.64;49;292.84
-2;Ramon;Dueñas;Cruz;H;rdueñas;&Y}tuFfU,R4T?fK;rdueñas@correo.es;13/02/1943;19;1.69;76;266.27
+﻿Id;Nombre;Apellido1;Apellido 2;Sexo;Usuario;Contraseña;Correo;Nacimiento;NumeroLikesRecibidos;Estatura;Edad;Ingresos
+1;Rafael;De Pedro;Peña;H;depedro9;[je4Wg34BEv7qSh;depedro9@mail.com;3/02/1970;11;1.64;49;292.84
+2;Ramon;Dueñas;Cruz;H;rdueñas;"&Y}tuFfU;R4T?fK";rdueñas@correo.es;13/02/1943;19;1.69;76;266.27
 3;Carlos;Vega;Hernandez;H;vega57;MK}4g,kYG@5Dc*d;vega57@email.com;26/05/1947;29;1.58;72;415.86
 4;Antonio;Barragan;Zarza;H;antbarragan51;w5{Xaakp[bRF/*[;antbarragan51@correo.es;28/07/1940;23;1.8;79;707.02
 5;Juan Jose;Estebanez;Caamaño;H;juanjoseestebanez40;rGy.R#+xGj}ecWe;juanjoseestebanez40@email.es;4/08/1943;72;1.94;76;192.7
-6;David;Manjon;Fernandez;H;david.manjon;,xKCf}ZaJB}__N&;david.manjon@mail.net;2/04/1960;85;1.96;59;592.29
+6;David;Manjon;Fernandez;H;david.manjon;";xKCf}ZaJB}__N&";david.manjon@mail.net;2/04/1960;85;1.96;59;592.29
 7;Pedro;Cueva;Gras;H;cueva55;@.ZSa{/[WX?Pzb};cueva55@email.es;28/02/1991;3;1.95;28;372.83
 8;Alberto;Gonzalez;Luna;H;gonzalez93;ZqiXD@Yp?Ay6+P.;gonzalez93@email.es;6/09/1973;62;1.52;46;532.28
-9;Carlos;Del Rio;Gonzalez;H;carlos.delrio;xxf7ZKN-Wu,TS$q;carlos.delrio@correo.es;7/04/1981;11;1.98;38;65.89
+9;Carlos;Del Rio;Gonzalez;H;carlos.delrio;"xxf7ZKN-Wu;TS$q";carlos.delrio@correo.es;7/04/1981;11;1.98;38;65.89
 10;Luis;Muñoz;Molina;H;luimuñoz;S_:vAF!H,z.*&MM;luimuñoz@mail.net;1/10/1943;44;1.76;76;748.87
 11;Jose Manuel;Jaen;Cascales;H;josjaen;j[nVqVcYYgGE)7X;josjaen@mail.com;1/02/1936;41;1.57;83;271.64
 12;Manuel;Diaz;Iglesias;H;manueldiaz12;AgQkPS,3wg$GYTX;manueldiaz12@mail.es;22/10/1942;93;1.55;77;440.68
@@ -16,7 +17,7 @@
 16;Jose Luis;Morales;Puertas;H;josmorales;!x-,iDPkq6GXhA9;josmorales@mail.net;12/07/1998;84;1.78;21;490.26
 17;Alejandro;Duran;Fernandez;H;duran68;)!hqP_XS#{LScbw;duran68@correo.es;16/10/1941;33;1.83;78;130.07
 18;Antonio;Rodriguez;Hernandez;H;antonio.rodriguez;Q&9uX=J)nM69PX,;antonio.rodriguez@mail.es;14/07/1998;59;1.67;21;989.04
-19;Carlos;Rodriguez;Fernandez;H;crodriguez64;5%K@tG:,{J_n+jJ;crodriguez64@email.net;27/12/1971;50;1.83;47;499.89
+19;Carlos;Rodriguez;Fernandez;H;crodriguez64;"5%K@tG:;{J_n+jJ";crodriguez64@email.net;27/12/1971;50;1.83;47;499.89
 20;Javier;Gutierrez;Alvarado;H;javiergutierrez24;g},{rQeGv4tzM+[;javiergutierrez24@email.net;26/11/1988;66;1.78;30;679.81
 21;Antonio;Quintana;Gil;H;aquintana61;Tz$m&rTJg!+@_CM;aquintana61@email.net;25/09/1936;44;1.53;83;440.97
 22;Manuel;Arellano;Solis;H;manuelarellano;&zHgVj}P.AJ7XRW;manuelarellano@mail.es;27/10/1964;32;1.62;55;655.64
@@ -26,7 +27,7 @@
 26;Rafael;Ordoñez;Gaspar;H;rafordoñez;+Uj5Y$G*6g6_!Cr;rafordoñez@mail.es;1/11/1963;57;1.82;55;686.57
 27;alvaro;Garcia;Sanchez;H;alv.garcia;+dNerBh.YYN-7Cc;alv.garcia@correo.com;3/03/1991;60;1.88;28;104.86
 28;Miguel angel;Bayona;Piris;H;miguebayona;ZC{5*d}6)xxe?pa;miguebayona@email.net;7/09/1953;6;1.94;66;999.28
-29;Salvador;Aguilar;Reyes;H;salvadoraguilar;,KC)USZUWP,Kzcv;salvadoraguilar@correo.net;15/02/1935;11;1.88;84;101.11
+29;Salvador;Aguilar;Reyes;H;salvadoraguilar;";KC)USZUWP;Kzcv";salvadoraguilar@correo.net;15/02/1935;11;1.88;84;101.11
 30;Manuel;Jover;Juarez;H;jover94;=z/&$n}vSB%b[3V;jover94@correo.net;22/11/1949;86;1.93;69;846.72
 31;Miguel angel;Vega;Rodriguez;H;m.vega;r9bRYaW_h:z3]XV;m.vega@mail.net;5/07/1958;40;1.59;61;939.88
 32;Jose;Herrera;Lopez;H;j.herrera;UeQCmE:TQ%4y*)a;j.herrera@email.net;1/02/1976;94;1.96;43;215.98
@@ -38,7 +39,7 @@
 38;Antonio;Conde;Carpintero;H;conde96;d9/mxyD@vvc7qC?;conde96@correo.es;2/09/1957;96;1.58;62;609.65
 39;Juan;Tejeda;Ferrero;H;tejeda93;LZiNXjj4?5(+TM_;tejeda93@correo.com;24/02/1991;78;1.52;28;895.24
 40;angel;Jimenez;Martin;H;angjimenez;A[GHx.xRUw/9Qrh;angjimenez@correo.com;7/07/1961;43;1.65;58;651.15
-41;Jose Luis;Guijarro;Robles;H;guijarro54;d}w%)BREvFp,djK;guijarro54@correo.es;18/04/1948;37;1.75;71;463.99
+41;Jose Luis;Guijarro;Robles;H;guijarro54;"d}w%)BREvFp;djK";guijarro54@correo.es;18/04/1948;37;1.75;71;463.99
 42;Francisco;Salinas;Pons;H;fra.salinas;6dN9br=,7e%#vm=;fra.salinas@email.es;21/11/1949;92;1.52;69;563.31
 43;Francisco;Leiva;Cano;H;franciscoleiva;_=B,j@uG5HMUSmv;franciscoleiva@email.com;2/06/1964;69;1.96;55;410.83
 44;Jose Luis;Osorio;Suarez;H;jososorio;3pS#7*g&QuZEGgh;jososorio@email.net;21/02/1980;37;1.77;39;826.18
@@ -55,7 +56,7 @@
 55;Carlos;Murillo;Carceles;H;cmurillo67;g&{g%j*7($56gR,;cmurillo67@correo.com;30/08/1965;92;1.59;54;977.67
 56;Juan Carlos;Barranco;Gomez;H;jua.barranco;%+C7@}XyTRi-!g);jua.barranco@mail.com;5/03/1944;73;1.54;75;751.34
 57;Francisco;Frances;Pereira;H;ffrances;C6iA7U}$YbM)R$m;ffrances@email.com;5/01/1954;64;1.77;65;182.07
-58;David;Rodriguez;Duran;H;davrodriguez;Y=Mkdhwq,8.*gxz;davrodriguez@correo.es;23/04/1948;8;1.9;71;508.01
+58;David;Rodriguez;Duran;H;davrodriguez;"Y=Mkdhwq;8.*gxz";davrodriguez@correo.es;23/04/1948;8;1.9;71;508.01
 59;Ramon;Carril;Ramos;H;rcarril;[d(=kqcQp.b8MAn;rcarril@mail.com;11/03/1946;22;1.9;73;519.5
 60;Vicente;Ruiz;Andreu;H;ruiz96;$F/HVC*$pZhBJUM;ruiz96@email.es;21/02/1936;14;1.52;83;949.78
 61;Jose Luis;Amoros;Lopez;H;joseluisamoros;{7w,Hy@HxJ)Xbkv;joseluisamoros@mail.net;16/02/1975;53;1.54;44;797.11
@@ -68,10 +69,10 @@
 68;angel;Alvarez;Heredia;H;aalvarez;%Tpc2p*vRN$qwP.;aalvarez@mail.com;26/04/1961;95;1.8;58;175.25
 69;Miguel;Muñoz;Sanchez;H;mmuñoz;]:ND+]j3ED_wr&K;mmuñoz@email.com;14/11/1974;45;1.81;44;930.21
 70;Miguel;Roca;Alba;H;mroca;[Xz9v(NJZqw59ue;mroca@correo.es;28/10/1937;12;1.88;82;401.26
-71;Antonio;Neira;Diaz;H;a.neira;naCZ#YFv4/,(}.U;a.neira@mail.es;29/01/1972;90;1.95;47;407.85
+71;Antonio;Neira;Diaz;H;a.neira;"naCZ#YFv4/;(}.U";a.neira@mail.es;29/01/1972;90;1.95;47;407.85
 72;Miguel angel;Sanchez;Gonzalez;H;msanchez;Z.x9&WKWU(3D&}a;msanchez@mail.es;9/08/1986;91;1.66;33;364.52
 73;Juan Jose;Godoy;Roca;H;jgodoy;HdWkE8?(H?zZCub;jgodoy@correo.net;20/07/1936;85;1.94;83;772.62
-74;Jose;Cortes;Fernandez;H;jcortes;,F6Sie}L,)6*G}i;jcortes@mail.net;27/07/1969;57;1.8;50;766.82
+74;Jose;Cortes;Fernandez;H;jcortes;";F6Sie}L,)6*G}i";jcortes@mail.net;27/07/1969;57;1.8;50;766.82
 75;Rafael;Garcia;Marquez;H;rafaelgarcia78;NcvNS(@7=9CLi3T;rafaelgarcia78@mail.com;21/10/1946;91;1.66;73;799.41
 76;Jose Antonio;Nuñez;Garcia;H;jnuñez;$(D[Wu3B6gjRkub;jnuñez@correo.net;16/08/1962;12;1.68;57;870.13
 77;angel;Merino;Mera;H;merino48;(,KCRm_!qk&{r=F;merino48@mail.net;15/11/1978;68;1.95;40;67.67
@@ -86,19 +87,19 @@
 86;Miguel angel;Fernandez;Bravo;H;migue.fernandez;BM*E+?$aS6n8epG;migue.fernandez@correo.com;4/07/1962;53;1.74;57;339.21
 87;Francisco;Carranza;Garces;H;franciscocarranza;f,#hBE$@zG+P3EZ;franciscocarranza@correo.net;27/11/1996;23;1.85;22;371.32
 88;Enrique;Guerrero;Barragan;H;guerrero17;S!eHJ_i)8-zQ4,k;guerrero17@mail.es;18/10/1937;54;1.57;82;658.96
-89;Juan Jose;Campos;Garcia;H;j.campos;MJ&TiF[,bLg@P,d;j.campos@email.net;30/11/1959;77;1.57;59;643.03
+89;Juan Jose;Campos;Garcia;H;j.campos;"MJ&TiF[;bLg@P,d";j.campos@email.net;30/11/1959;77;1.57;59;643.03
 90;Francisco Javier;Piñero;Tovar;H;frapiñero;TJ9-&dFtaNC.L&-;frapiñero@email.es;18/08/1977;45;1.7;42;679.75
 91;Alejandro;Lastra;Mora;H;alejandrolastra100;8C839hy]bbBjTMU;alejandrolastra100@correo.net;15/11/1962;30;1.86;56;477.9
-92;Jose Luis;Garcia;Pereira;H;jos.garcia;f)},HjmvG,K@j,g;jos.garcia@correo.es;27/02/2001;10;2;18;477.86
+92;Jose Luis;Garcia;Pereira;H;jos.garcia;"f)},HjmvG;K@j;g";jos.garcia@correo.es;27/02/2001;10;2;18;477.86
 93;Francisco;Santiago;Navarro;H;santiago26;TJT7!$Tm@:g{RD2;santiago26@correo.es;14/04/1942;90;1.67;77;947.54
 94;Antonio;Otero;Navas;H;ant.otero;4n{UXwpUzrV6y35;ant.otero@email.net;24/04/1957;14;1.88;62;908.69
-95;Juan Antonio;Garcia;Merino;H;garcia32;ZP{!k8zZx=yaZ,Q;garcia32@mail.es;9/02/1989;15;1.59;30;235.93
+95;Juan Antonio;Garcia;Merino;H;garcia32;"ZP{!k8zZx=yaZ;Q";garcia32@mail.es;9/02/1989;15;1.59;30;235.93
 96;Jorge;Abad;Garcia;H;jorgeabad;V#$FUV2NV(jv%BF;jorgeabad@mail.net;30/01/1950;34;1.72;69;354.45
 97;angel;Gonzalez;Conde;H;agonzalez;VqDh-quBt9ry]Ky;agonzalez@mail.es;27/11/1958;61;1.62;60;957.86
 98;Miguel;Marco;Pelaez;H;mig.marco;vq$+PpjArnDa3fT;mig.marco@correo.com;6/06/1953;46;1.77;66;704.58
 99;Enrique;Rodriguez;Mena;H;enrrodriguez;b?}u7&KS{RKLN$j;enrrodriguez@mail.com;9/09/1953;36;1.6;66;443.1
 100;Pablo;Esteve;Galan;H;pabloesteve;,.h/-vQ@X*PMNL5;pabloesteve@mail.es;11/09/1988;73;1.77;31;303.27
-101;Manuel;Carrion;Fernandez;H;manuelcarrion;PHM3aG5m,5Wqr7?;manuelcarrion@email.com;17/08/1962;80;1.58;57;297.56
+101;Manuel;Carrion;Fernandez;H;manuelcarrion;"PHM3aG5m;5Wqr7?";manuelcarrion@email.com;17/08/1962;80;1.58;57;297.56
 102;Sergio;Moya;Moral;H;moya67;B8YMA[f_p5!4A+t;moya67@correo.net;19/03/1936;13;1.7;83;129.26
 103;Jaume;Ferri;Moreno;H;jaumeferri;=U9N+i)u-twpdtA;jaumeferri@email.es;31/01/1947;17;1.8;72;616.92
 104;Adrian;Rey;Quintanilla;H;adr.rey;,L+79uxYcF?aZSZ;adr.rey@correo.net;21/11/1968;71;1.61;50;698.55
@@ -112,7 +113,7 @@
 112;Carlos;Perez;Varela;H;perez71;rHB5LqJ/,XL_cZk;perez71@mail.com;1/08/1954;95;1.93;65;875.73
 113;Antonio;Benavent;Perez;H;abenavent;t/K#vVKuAr2-.d6;abenavent@mail.es;16/05/1936;62;1.73;83;784.4
 114;Francisco Javier;Martin;Ros;H;franciscojaviermartin18;.xH&F}?#%NZ8Jc9;franciscojaviermartin18@mail.net;8/07/1979;2;1.77;40;776.17
-115;Miguel angel;Peña;Rodriguez;H;migpeña;F@$!f#tBM6gA2,z;migpeña@email.net;13/08/1956;93;1.78;63;709.33
+115;Miguel angel;Peña;Rodriguez;H;migpeña;"F@$!f#tBM6gA2;z";migpeña@email.net;13/08/1956;93;1.78;63;709.33
 116;Antonio;Parra;Hinojosa;H;antonioparra1;9)Q#@WK*GEJjDEp;antonioparra1@correo.es;16/02/1998;95;1.93;21;878.38
 117;Carlos;De la Fuente;Lopez;H;d57;2vQ:th!W$_9k&9/;d57@mail.es;17/05/1997;26;1.99;22;946.24
 118;Jose;Mansilla;Garcia;H;j.mansilla;UVzWY#9Qimt.@6/;j.mansilla@mail.es;24/02/1944;4;1.59;75;158.26
@@ -121,21 +122,21 @@
 121;Pablo;Cortes;Mora;H;pabcortes95;v.QD.dk/85h(%uR;pabcortes95@email.com;25/03/1981;82;1.94;38;248.45
 122;Francisco;Roman;Gonzalez;H;roman43;Qq:B$gY8Exy?/7B;roman43@email.com;23/12/1943;93;1.6;75;276.39
 123;angel;Garcia;Montero;H;garcia20;6VX3qg4u_hLTxJ,;garcia20@email.es;20/03/1976;7;1.94;43;498.74
-124;Antonio;Calvo;Ordoñez;H;acalvo;R{m9yV-@,,dwVwh;acalvo@email.es;10/05/1989;75;1.53;30;394.87
+124;Antonio;Calvo;Ordoñez;H;acalvo;"R{m9yV-@;,dwVwh";acalvo@email.es;10/05/1989;75;1.53;30;394.87
 125;Daniel;Fernandez;Salazar;H;d.fernandez;_yVqe[bx[gN$A27;d.fernandez@email.es;25/10/1943;39;1.61;76;195.22
-126;Jose Luis;Ortega;Herrera;H;jos.ortega;(FN*Y{f_c[9[HA,;jos.ortega@email.net;27/03/1963;62;1.68;56;248.42
+126;Jose Luis;Ortega;Herrera;H;jos.ortega;"(FN*Y{f_c[9[HA;";jos.ortega@email.net;27/03/1963;62;1.68;56;248.42
 127;Jose Luis;Rosell;Gonzalez;H;jrosell;.MYwdpB6nG&8acZ;jrosell@mail.com;28/02/1965;71;1.77;54;285.61
 128;Manuel;Fernandez;Dueñas;H;manuelfernandez5;fnqW*=97MPA&#qR;manuelfernandez5@mail.net;24/12/1992;88;1.61;26;267.8
-129;Jose;Cabeza;Fernandez;H;jos.cabeza;,VRhwHzR4@v)m?w;jos.cabeza@email.com;10/04/1997;25;1.6;22;94.18
+129;Jose;Cabeza;Fernandez;H;jos.cabeza;";VRhwHzR4@v)m?w";jos.cabeza@email.com;10/04/1997;25;1.6;22;94.18
 130;Pablo;Alonso;Rius;H;palonso65;#&q9eVb(PDKSvWx;palonso65@email.es;24/01/1947;14;1.57;72;523.8
 131;Antonio;Pinto;Herrera;H;pinto87;Zy!DjQTPCeG@VXp;pinto87@email.com;4/09/1964;49;1.6;55;53.74
 132;Antonio;Ruiz;Vicente;H;antruiz;AXEt4/$7H,Q:M&m;antruiz@email.es;3/07/2001;14;1.64;18;462.1
-133;Juan Antonio;Lopez;Garcia;H;lopez67;RKk%7xD6v,bwWr!;lopez67@mail.net;15/04/1994;71;1.81;25;481.66
-134;Jose;Ortiz;Martinez;H;josortiz;M]Btn+(V4CPkZ,G;josortiz@email.net;2/09/1977;41;1.58;42;851.1
+133;Juan Antonio;Lopez;Garcia;H;lopez67;"RKk%7xD6v;bwWr!";lopez67@mail.net;15/04/1994;71;1.81;25;481.66
+134;Jose;Ortiz;Martinez;H;josortiz;"M]Btn+(V4CPkZ;G";josortiz@email.net;2/09/1977;41;1.58;42;851.1
 135;alvaro;Fernandez;Garcia;H;alvarofernandez;E3VF(rX7i,H@[y#;alvarofernandez@mail.net;14/06/1977;74;1.53;42;76.86
 136;Rafael;Casal;Sanchez;H;rafael.casal;59f.:gw9(r#,v-E;rafael.casal@correo.net;26/07/1937;97;1.73;82;716.21
 137;Javier;Mesa;Exposito;H;mesa38;BzHp{qR5Cx@8Z:z;mesa38@mail.com;21/11/1994;24;1.55;24;713.48
-138;Jorge;De la Calle;Fernandez;H;jordelacalle55;P#HLTY#-8=4D,iE;jordelacalle55@email.net;26/11/1959;42;1.64;59;618.65
+138;Jorge;De la Calle;Fernandez;H;jordelacalle55;"P#HLTY#-8=4D;iE";jordelacalle55@email.net;26/11/1959;42;1.64;59;618.65
 139;Alberto;Segovia;Fernandez;H;segovia57;u#qPWqxDt7a.]Fe;segovia57@email.net;15/11/1953;30;1.88;65;732.79
 140;Pedro;Moreno;Martin;H;pmoreno40;MX[q}[cb*eJt/=d;pmoreno40@mail.com;13/11/1951;18;1.51;67;120.69
 141;Jose;Nieto;Sanchez;H;jesnieto89;Ee#DXx.!ZRt7jyL;jesnieto89@mail.com;8/10/1976;57;1.52;43;684.08
@@ -145,13 +146,13 @@
 145;Javier;Lopez;Lopez;H;javierlopez;c!kM$8Wg/i7iDf);javierlopez@correo.com;15/03/1981;68;1.75;38;443.07
 146;Ruben;Cordoba;Benavides;H;rub.cordoba;z4TUdtSzn6N47TL;rub.cordoba@mail.com;28/03/1971;97;1.63;48;244.12
 147;Manuel;Torres;Hernandez;H;mantorres16;kH$M-3!(N?8VGbU;mantorres16@correo.es;13/06/1935;66;1.93;84;506.12
-148;Luis;Moreno;Martinez;H;luismoreno17;9!gm/b?B,]/iV#t;luismoreno17@mail.es;17/08/1991;11;1.99;28;668.37
-149;Manuel;Colomer;Castro;H;manuelcolomer74;$BWtY!]=rLZ-,-R;manuelcolomer74@email.com;27/07/1984;54;1.74;35;728.51
+148;Luis;Moreno;Martinez;H;luismoreno17;"9!gm/b?B;]/iV#t";luismoreno17@mail.es;17/08/1991;11;1.99;28;668.37
+149;Manuel;Colomer;Castro;H;manuelcolomer74;"$BWtY!]=rLZ-;-R";manuelcolomer74@email.com;27/07/1984;54;1.74;35;728.51
 150;Ramon;Murillo;Martinez;H;rmurillo;u?Y33M6yq8fEk-[;rmurillo@email.net;3/04/1969;38;1.75;50;784.14
 151;Josep Maria;Pico;Fernandez;H;josepmariapico;2_}x.XeF4Dem6di;josepmariapico@correo.es;14/12/1984;78;1.98;34;826.28
 152;Manuel;Marquez;Garcia;H;manmarquez;PB{g@%AU$iPZY9?;manmarquez@email.es;6/10/1947;52;1.61;72;903.39
 153;Jorge;Domingo;Arenas;H;jordomingo;(.(3DRc?KVYzCAy;jordomingo@mail.net;16/08/1968;80;1.89;51;219.57
-154;Fernando;Martinez;Perez;H;fermartinez;wnZcJ9]xc,k&*T5;fermartinez@mail.es;25/11/1952;35;1.98;66;794.14
+154;Fernando;Martinez;Perez;H;fermartinez;"wnZcJ9]xc;k&*T5";fermartinez@mail.es;25/11/1952;35;1.98;66;794.14
 155;Josep;Sanchez;Garcia;H;jossanchez;#qr=P]J]L[L$%5K;jossanchez@email.es;8/11/1974;25;1.6;44;560.47
 156;Enrique;Muñoz;Sanchez;H;enr.muñoz;N4P)aq=Cj6Yq*.k;enr.muñoz@email.net;20/06/1961;4;1.59;58;825.23
 157;Francisco;Tamayo;Rodriguez;H;tamayo7;MA]%V(Qzu,Z]7,,;tamayo7@mail.com;1/07/1976;71;1.9;43;126.44
@@ -161,53 +162,53 @@
 161;Santiago;Estevez;Vargas;H;santiagoestevez10;zHw9QE@eQfQQ+p,;santiagoestevez10@mail.net;1/02/1960;94;1.9;59;838.21
 162;Fernando;Bilbao;Bas;H;bilbao58;g2Db$RH)&H_L*jZ;bilbao58@correo.net;9/08/1947;57;1.62;72;712.91
 163;Jose Luis;Novo;Cuervo;H;josnovo;_WMQ76Q72:Mf-fx;josnovo@correo.com;23/09/1986;65;1.93;33;886.52
-164;Ramon;Zamora;Llorente;H;rzamora5;,f{kR/m4,ttr)SX;rzamora5@mail.net;18/01/1939;30;1.56;80;886.65
+164;Ramon;Zamora;Llorente;H;rzamora5;";f{kR/m4,ttr)SX";rzamora5@mail.net;18/01/1939;30;1.56;80;886.65
 165;Jose Manuel;Mateos;Guillen;H;josmateos;7M/!aC8:M/T4bM};josmateos@correo.com;20/04/1972;60;1.51;47;786.67
 166;Juan;Rodriguez;Dominguez;H;juarodriguez;g[PA+)iKFe+kH,r;juarodriguez@mail.net;9/02/1966;55;1.97;53;388.48
-167;Manuel;Canal;Leon;H;mancanal;!,S+@,r4x)G%wLu;mancanal@email.com;27/02/1992;92;2;27;107.1
+167;Manuel;Canal;Leon;H;mancanal;"!;S+@,r4x)G%wLu";mancanal@email.com;27/02/1992;92;2;27;107.1
 168;Juan;Duran;Pulido;H;jduran;y$Bhyr-aa)}CG,$;jduran@correo.net;10/01/1962;100;1.64;57;691.97
-169;Luis;Jordan;Moreno;H;luisjordan;w*%v3!X!b,E+Hmk;luisjordan@correo.com;7/09/1958;54;2;61;606.33
+169;Luis;Jordan;Moreno;H;luisjordan;"w*%v3!X!b;E+Hmk";luisjordan@correo.com;7/09/1958;54;2;61;606.33
 170;Jose;Bautista;Doblas;H;josbautista76;8zYEi9kW/_rrvaM;josbautista76@email.com;13/04/1957;36;1.63;62;775.37
 171;Javier;Ibarra;Rubio;H;javieribarra;+aMw2*dD5v/}8Q/;javieribarra@mail.es;27/03/1935;62;1.95;84;510.62
 172;Eduardo;Caballero;Lara;H;edu.caballero;H,[#+Pt#nKrLn)H;edu.caballero@mail.net;26/10/1951;34;1.78;68;616.79
 173;Sergio;Diaz;Simon;H;sergiodiaz46;!FxG@aj{H-:k.wy;sergiodiaz46@correo.com;30/09/1936;12;1.91;83;442.93
 174;Fernando;Mateos;Quintero;H;f.mateos;]}H4U?n&!pHH5N7;f.mateos@email.es;3/01/1948;80;1.6;71;655.08
 175;Jose Luis;Miñana;Hernandez;H;jos.miñana;r@.a.DEJw*p-G!J;jos.miñana@mail.com;6/10/1984;94;1.55;35;769.65
-176;alvaro;Rodriguez;Molina;H;rodriguez78;dzBC$uh.ba)z)p,;rodriguez78@correo.net;23/02/1982;47;1.82;37;412.41
+176;alvaro;Rodriguez;Molina;H;rodriguez78;"dzBC$uh.ba)z)p;";rodriguez78@correo.net;23/02/1982;47;1.82;37;412.41
 177;Jose Luis;Saez;Soto;H;j.saez;[kPRQ-a=rm]ABPq;j.saez@correo.com;6/03/1974;55;1.82;45;649.02
 178;Rafael;Da Costa;Sanchez;H;d17;c%%nW9A[yn!V.-H;d17@correo.com;27/10/1953;13;1.69;66;194.99
-179;Manuel;Pastor;Delgado;H;manuelpastor;HaYw_,#6!X+V#8J;manuelpastor@correo.net;22/12/1993;7;1.89;25;792.2
+179;Manuel;Pastor;Delgado;H;manuelpastor;"HaYw_;#6!X+V#8J";manuelpastor@correo.net;22/12/1993;7;1.89;25;792.2
 180;Jose;Porras;Toscano;H;jesus.porras;A.=:*_&at??K/n#;jesus.porras@mail.es;19/11/1941;68;1.54;77;835.97
-181;Jose;Cabello;Alfonso;H;j.cabello;ATS=J24.D{L]E,y;j.cabello@correo.es;19/07/1945;43;1.99;74;797.02
+181;Jose;Cabello;Alfonso;H;j.cabello;"ATS=J24.D{L]E;y";j.cabello@correo.es;19/07/1945;43;1.99;74;797.02
 182;Jose;Duran;Diz;H;jose.duran;#Dj]xLD#Z()*quU;jose.duran@email.net;7/01/1973;26;1.81;46;288.18
 183;Pedro;Suarez;Moran;H;pedrosuarez;TraR#2G3UBjz*EW;pedrosuarez@email.net;10/11/1937;22;1.93;81;122.92
 184;Javier;Madrid;Arroyo;H;jav.madrid;2bWZR=xHf],*KnC;jav.madrid@correo.net;4/01/1966;37;1.69;53;607.96
 185;Jose;Martinez;Lorente;H;josemartinez100;?-:aRxSfUU8y:(*;josemartinez100@mail.es;9/02/1941;65;1.96;78;192.77
 186;Enrique;Merino;Hernandez;H;e.merino;J&**hT55jLmxEBe;e.merino@mail.com;14/01/1937;34;1.53;82;116.04
-187;Roberto;Benitez;Torres;H;robbenitez40;c)iZ){K=X/_L?D,;robbenitez40@mail.net;11/10/1979;27;1.65;40;626.06
+187;Roberto;Benitez;Torres;H;robbenitez40;"c)iZ){K=X/_L?D;";robbenitez40@mail.net;11/10/1979;27;1.65;40;626.06
 188;Salvador;Jordan;Rodriguez;H;saljordan;qY9@byM&PuFTyja;saljordan@email.es;17/08/1941;22;1.6;78;961
-189;Francisco;Recuero;De las Heras;H;franciscorecuero;6J?hu?2tG=i,nLM;franciscorecuero@mail.net;14/09/1939;2;1.94;80;360.95
+189;Francisco;Recuero;De las Heras;H;franciscorecuero;"6J?hu?2tG=i;nLM";franciscorecuero@mail.net;14/09/1939;2;1.94;80;360.95
 190;angel;Arango;Alsina;H;angel.arango;.$y)bu(b!2Z2?T9;angel.arango@email.es;17/05/1951;3;1.84;68;543.47
 191;Jose;Lopez;Ventura;H;lopez26;,qw%&[N4p(n#S.];lopez26@mail.es;3/01/1944;23;1.82;75;725.89
 192;Javier;Cortes;Jimenez;H;cortes76;_EWCY+WWcTGeabY;cortes76@correo.com;4/04/1956;27;1.75;63;952.4
-193;Jose;Mayo;Hernandez;H;may-74;7e8v$JvSH67F45,;mayo74@mail.com;22/08/1956;76;1.67;63;691.12
-194;Antonio;Baños;Rodriguez;H;antoniobaños36;,hCa&52?(t+Ei4T;antoniobaños36@email.es;27/05/1995;24;1.82;24;793.66
+193;Jose;Mayo;Hernandez;H;may-74;"7e8v$JvSH67F45;";mayo74@mail.com;22/08/1956;76;1.67;63;691.12
+194;Antonio;Baños;Rodriguez;H;antoniobaños36;";hCa&52?(t+Ei4T";antoniobaños36@email.es;27/05/1995;24;1.82;24;793.66
 195;Jaime;Jimenez;Martin;H;jimenez37;HCD_!Bq@%R[7]=P;jimenez37@correo.com;7/11/1997;18;1.74;21;312.22
-196;Pablo;Sanchez;Arrieta;H;psanchez;A,=Nxmnz(fgRr[b;psanchez@email.com;16/05/1961;57;1.9;58;925.95
+196;Pablo;Sanchez;Arrieta;H;psanchez;"A;=Nxmnz(fgRr[b";psanchez@email.com;16/05/1961;57;1.9;58;925.95
 197;Salvador;Alonso;Perez;H;sal.alonso;jvwM=bk4]?z@LjZ;sal.alonso@email.net;21/06/1998;36;1.98;21;957.85
 198;Javier;Garcia;Alcaraz;H;javgarcia92;Qi4WNVqA=Ta=86_;javgarcia92@email.com;13/04/1969;13;1.54;50;160.08
 199;Aitor;Serrano;Blanco;H;ait.serrano;c{9y{:AU,E[z87#;ait.serrano@mail.es;23/10/1961;40;1.6;58;638.65
-200;Carlos;Pinedo;Abella;H;cpinedo;i8z43Z)B,e_aMTT;cpinedo@mail.net;25/01/1966;98;2;53;347.88
+200;Carlos;Pinedo;Abella;H;cpinedo;"i8z43Z)B;e_aMTT";cpinedo@mail.net;25/01/1966;98;2;53;347.88
 201;Jorge;Miguez;Bueno;H;jorge.miguez;p(ti*p9,(:(?3Zr;jorge.miguez@email.es;16/09/1992;61;1.62;27;811.23
 202;Santiago;Quiros;Vivas;H;squiros;NKF8,WFw(tXGAt$;squiros@email.com;6/11/1937;10;1.67;81;617.15
 203;Alberto;Montoro;Carmona;H;montoro7;_RVG6R:w4}Ua49?;montoro7@email.net;13/08/1948;25;1.67;71;693.48
-204;Ramon;Fernandez;Garmendia;H;rfernandez;A#}i,)(zDXH)(=[;rfernandez@mail.com;13/04/1981;29;1.58;38;944.29
+204;Ramon;Fernandez;Garmendia;H;rfernandez;"A#}i;)(zDXH)(=[";rfernandez@mail.com;13/04/1981;29;1.58;38;944.29
 205;Jose;Andres;Rodriguez;H;jandres;-%9UM7rK%}!-Vpj;jandres@email.es;22/02/1935;58;1.75;84;580.28
 206;Diego;Rodriguez;Sanz;H;drodriguez;#EM3xBt5R$vVT7Y;drodriguez@mail.com;18/12/1991;86;1.86;27;253.88
 207;Antonio;Salvador;Rodriguez;H;salvador97;e}p+3LThRiFMvT4;salvador97@correo.net;20/12/1992;81;1.93;26;79.16
 208;Unai;Jurado;Rivera;H;unai.jurado;:TPbQ?79zTf-9_B;unai.jurado@email.com;22/02/1964;70;1.5;55;718.21
 209;Pablo;Gutierrez;Camarasa;H;pgutierrez;)N)g&a-ij,{vvyB;pgutierrez@correo.es;2/10/1937;46;1.74;82;69.94
-210;Luis;Roldan;Martin;H;lroldan95;vWqcQCV,9P!+rHp;lroldan95@email.com;1/06/1988;70;1.88;31;363.36
+210;Luis;Roldan;Martin;H;lroldan95;"vWqcQCV;9P!+rHp";lroldan95@email.com;1/06/1988;70;1.88;31;363.36
 211;Juan Jose;Martin;Fernandez;H;juamartin;]9t[k?Qnptyy$=6;juamartin@correo.net;13/01/1982;22;1.56;37;260.89
 212;Jose;Albaladejo;Ferrando;H;josalbaladejo;X,)9/x3g/uk6G4m;josalbaladejo@mail.es;28/04/1959;84;1.97;60;384.05
 213;Antonio;Arrebola;Bermejo;H;arrebola69;_)Saz$S$ZNvyuv6;arrebola69@email.net;31/10/1941;19;1.99;77;929.98

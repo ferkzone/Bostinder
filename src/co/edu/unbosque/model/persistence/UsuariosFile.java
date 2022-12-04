@@ -23,16 +23,27 @@ public class UsuariosFile {
 		
 	}
 
-	public static void leerArchivoH(){
+	public static void leerArchivoH(ArrayList<HombreDTO> h){
 		try {
 			lector = new BufferedReader(new FileReader("src/co/edu/unbosque/model/persistence/TablaHombres.csv"));
 			while ((linea = lector.readLine()) != null ) {				
 				 String datos[] = linea.split(";");
-				 linea = lector.readLine();
-				 System.out.println(Arrays.toString(datos));
+				 h.add(new HombreDTO (datos[1], 
+					datos[2], 
+					datos[3],
+					datos[4], 				 
+					datos[6],				 			
+					Integer.parseInt(datos[11]), 
+					Double.parseDouble(datos[10]),
+					Integer.parseInt(datos[9]),	
+					datos[7],
+					Double.parseDouble(datos[12]),
+					datos[8],
+					datos[5]));
+				 
 			}			
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, e);
+			e.printStackTrace();
 		} finally {
 			try {
 				lector.close();
@@ -42,14 +53,37 @@ public class UsuariosFile {
 			}
 		}	
 	}
-	public static void leerArchivoM(){
+	public static void leerArchivoM(ArrayList<MujerDTO> m){
+		boolean divorcio = false;
 		try {
 			lector = new BufferedReader(new FileReader("src/co/edu/unbosque/model/persistence/TablaMujeres.csv"));
 			while ((linea = lector.readLine()) != null ) {
-				 String datos[] = linea.split(";");				 
+				String datos[] = linea.split(";");	
+				if(datos[9].equals("SI")) {
+					divorcio = true;
+				}				
+				 m.add(new MujerDTO((datos[1]), 
+							datos[2], 
+							datos[3],
+							datos[4], 
+							datos[6], 
+							Integer.parseInt(datos[12]),
+							Double.parseDouble(datos[11]),
+							Integer.parseInt(datos[10]),
+							divorcio, 
+							datos[7], 
+							datos[8], 
+							datos[5]));
 			}
+		
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, e);
+			e.printStackTrace();
+		}
+		try {
+			lector.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	public void writeCSV(ArrayList<HombreDTO> a) {

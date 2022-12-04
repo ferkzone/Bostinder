@@ -28,7 +28,7 @@ public class HombreDAO {
 						   "Estatura: " + hombres.get(i).getEstatura()+" "+
 						   "Numero de likes: " + hombres.get(i).getNlikes()+" "+
 						   "Divorcios: " + hombres.get(i).getDivorcio() +" "+ 
-						   "Ingresos mensuales: " + hombres.get(i).getSalario();
+						   "Ingresos mensuales: " + hombres.get(i).getSalario() + "\n";
 		}
 		return texto;
 	}

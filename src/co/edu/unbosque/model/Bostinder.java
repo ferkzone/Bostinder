@@ -11,8 +11,7 @@ public class Bostinder {
 	private HombreDAO hombre;
 	private SonidoDAO sound;
 	private UsuariosFile usuarios;
-	private String[] datah;
-	private String[] datam;
+
 	
 
 	public Bostinder() {
@@ -26,46 +25,12 @@ public class Bostinder {
 	
 	
 	public void cargarHombres() {
-		usuarios.leerArchivoH();
-		//datah = usuarios.getDatos();
-		for(int i=1;i<50;i++) {
-			hombre.anadirHombres(datah[i*1], 
-					datah[i*2], 
-					datah[i*3],
-					datah[i*4], 				 
-					datah[i*6],				 			
-					Integer.parseInt(datam[i*11]), 
-					Double.parseDouble(datam[i*10]),
-					Integer.parseInt(datam[i*9]),	
-					datah[i*7],
-					Double.parseDouble(datam[i*12]),
-					datah[i*8],
-					datah[i*5]);
-					
-		}
+		UsuariosFile.leerArchivoH(getHombre().getHombres());
+		System.out.println(hombre.listarHombres());
 	}
 	
 	public void cargarMujeres() {
-		usuarios.leerArchivoM();
-		boolean divorcio = false;
-		//datam = usuarios.getDatos();
-		for(int i=1;i<10;i++) {
-			if(datam[i*9].equals("SI")) {
-				divorcio = true;
-			}
-			mujer.anadirMujeres(datam[i*1], 
-					datam[i*2], 
-					datam[i*3],
-					datam[i*4], 
-					datam[i*5], 
-					Integer.parseInt(datam[i*12]), 
-					Double.parseDouble(datam[i*11]),
-					Integer.parseInt(datam[i*10]),
-					divorcio, 
-					datam[i*7], 
-					datam[i*8], 
-					datam[i*6]);
-		}
+		UsuariosFile.leerArchivoM(getMujer().getMujeres());
 		System.out.println(mujer.listarMujeres());
 	}
 	public UsuariosFile getUsuarios() {

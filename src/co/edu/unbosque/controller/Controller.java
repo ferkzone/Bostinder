@@ -24,13 +24,13 @@ public class Controller implements ActionListener {
 	public Controller() {
 	
 		bos = new Bostinder();
-		UsuariosFile.leerArchivoH();
+        bos.cargarHombres();
 		iniciar();
 		
 	}
 
 	public void iniciar() {
-		fm = new FrameMenu(this,bos.getHandler());
+		fm = new FrameMenu(this);
 	}
 
 	@Override
